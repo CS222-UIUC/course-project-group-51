@@ -13,14 +13,17 @@ function closeAdvSearch() {
 }
 
 /*
-<form>
-<label class="washer">
-	<input type="checkbox" value=""> Washer/Dryer
-</label>
-</form>
-<label class="gym">
-	<input type="checkbox" value=""> Gym Access
-</label>
-</form>
-
+colors: 
+white: #fff8f6
+pink: #fff2f1
+gray: #d0cdc9
+green: #7d8743
+beige: #dabaa4
+darker beige: #c9a291
+cream: #f9f2ef
+brown: #886a5b
+orange text: #f6c197
+light purple #dec2f1
+teal: #c2ecf1
+lime green: #d4f1c2
 */

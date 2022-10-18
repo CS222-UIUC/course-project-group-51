@@ -6,11 +6,12 @@
 	visibility: hidden;
 	width: 0px; 
 	height: 0px;
-	border: black;
+	border: #484848;
 	border-width: 4px;
 	border-style: solid;
 	margin: 10px;
 	padding: 5px;
+	background-color: #e0d0cc;
 }
 #columns {
 	display: flex;
@@ -30,17 +31,48 @@
 	padding-right: 5px;
 }
 #infoArea {
-	width: 500px;
+	width: 80%;
 	height: 500px; 
-	border: black;
+	border: #484848;
 	border-width: 5px;
 	border-style: dashed;
 	margin: 10px;
+	background-color: #e0d0cc;
+	display: table-cell;
+	vertical-align: middle;
 	
 }
-#filters {
+body {
+	background-color: #ffc4c1;
 	
 }
 .buttonLabel {
 	margin: 5px;
+}
+table{
+	border-style:solid;
+	border-width:2px;
+	padding:0px;
+	border-collapse:collapse;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+th{
+	background-color:#484848;
+	color:white;
+	padding:5px;
+	border-right-style:solid;
+	border-right-width:2px;
+	border-color:gray;
+}
+td{
+	height:2em;
+	width:25ex;
+	border-right:gray 2px solid;
+	border-left:gray 2px solid;
+	padding:3px;
+}
+.even{
+	background-color:#E8E8E8;
 }
