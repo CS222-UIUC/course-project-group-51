@@ -12,6 +12,23 @@
 	margin: 10px;
 	padding: 5px;
 }
+#columns {
+	display: flex;
+	flex-direction: row;
+	flex: 80%;
+}
+#advButtons {
+	flex: 20%;
+}
+.row {
+	display: flex;
+	flex-direction: column;
+}
+.column {
+	flex: 50%;
+	padding-top: 10px;
+	padding-right: 5px;
+}
 #infoArea {
 	width: 500px;
 	height: 500px; 
@@ -22,10 +39,8 @@
 	
 }
 #filters {
-	padding-top: 10px;
-	padding-right: 5px;
+	
 }
-.num-rooms {
-	padding-top: 10px;
-	padding-bottom: 10px;
+.buttonLabel {
+	margin: 5px;
 }
