@@ -1,7 +1,4 @@
-#header{
-	font-family: "Impact", sans-serif;
-	
-}
+
 #advancedSearchFilters {
 	visibility: hidden;
 	width: 0px; 
@@ -9,14 +6,15 @@
 	border: #484848;
 	border-width: 4px;
 	border-style: solid;
-	margin: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 	padding: 5px;
 	background-color: #e0d0cc;
 }
 #columns {
 	display: flex;
 	flex-direction: row;
-	flex: 80%;
+	flex: 65%;
 }
 #advButtons {
 	flex: 20%;
@@ -26,13 +24,24 @@
 	flex-direction: column;
 }
 .column {
-	flex: 50%;
 	padding-top: 10px;
 	padding-right: 5px;
 }
+#bigColumn {
+	flex: 60%;
+}
+#smallColumn {
+	flex: 40%;
+}
+#loc {
+	flex: 15%;
+}
+#apartmentType {
+	margin-top: 5px;
+}
 #infoArea {
 	width: 80%;
-	height: 500px; 
+	height: 400px; 
 	border: #484848;
 	border-width: 5px;
 	border-style: solid;
@@ -44,8 +53,14 @@
 }
 body {
 	background-color: #ffc4c1;
+	font-family: "Century Gothic", century gothic, sans-serif;
+	font-weight: bold;
 	
 	
+}
+input {
+	font-family: "Century Gothic", century gothic, sans-serif;
+
 }
 .buttonLabel {
 	margin: 5px;

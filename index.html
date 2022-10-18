@@ -20,7 +20,7 @@
 <input type="button" id="closeAdv" value="Close Advanced Search" />
 </div>
 <div id="columns" class="rows">
-<div class="column">
+<div class="column" id="bigColumn">
 <p class="buttonLabel">Company Name </p>
 <input type="text" id="company" placeholder="Company Name" />
 <p class="buttonLabel">Maximum Rent</p>
@@ -61,7 +61,7 @@
       <input type="checkbox" value=""> 5+
     </label>
 </form>
-<form>
+<form id="apartmentType">
  <label class="typeFilter">
       <input type="checkbox" value=""> Apartment
     </label>
@@ -70,7 +70,8 @@
     </label>
 </form>
 </div>
-<div class="column">
+<div class="column" id="smallColumn">
+<p class="buttonLabel"> Amenities </p>
 <form>
 <label class="parking">
 	<input type="checkbox" value=""> Parking Spot
@@ -99,8 +100,26 @@
 	<input type="checkbox" value=""> Wi-Fi Included
 </label>
 </form>
-
 </div>
+</div>
+<div id="loc">
+<p class="buttonLabel"> Location </p>
+<form>
+ <label class="location">
+      <input type="checkbox" value=""> North of Green
+    </label>
+    <label class="location">
+      <input type="checkbox" value=""> South of Green
+    </label>
+</form>
+<form>
+	<label class="location">
+      <input type="checkbox" value=""> Urbana
+    </label>
+    <label class="location">
+      <input type="checkbox" value=""> Champaign
+    </label>
+</form>
 </div>
 </div>
 <div id="infoArea">

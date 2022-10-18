@@ -4,7 +4,7 @@ document.getElementById("closeAdv").addEventListener("click", closeAdvSearch);
 function openAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "visible";
 	document.getElementById("advancedSearchFilters").style.width = "400px";
-	document.getElementById("advancedSearchFilters").style.height	= "250px";
+	document.getElementById("advancedSearchFilters").style.height	= "330px";
 }
 function closeAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "hidden";
