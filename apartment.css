@@ -1,0 +1,31 @@
+#header{
+	font-family: "Impact", sans-serif;
+	
+}
+#advancedSearchFilters {
+	visibility: hidden;
+	width: 0px; 
+	height: 0px;
+	border: black;
+	border-width: 4px;
+	border-style: solid;
+	margin: 10px;
+	padding: 5px;
+}
+#infoArea {
+	width: 500px;
+	height: 500px; 
+	border: black;
+	border-width: 5px;
+	border-style: dashed;
+	margin: 10px;
+	
+}
+#filters {
+	padding-top: 10px;
+	padding-right: 5px;
+}
+.num-rooms {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

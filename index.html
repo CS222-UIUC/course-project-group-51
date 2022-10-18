@@ -6,6 +6,43 @@
 <link href="apartment.css" rel="stylesheet" />
 </head>
 <body>
-<h1> welcome to the apartment app (test text) </h1>
+<h1 id="header"> Apartment Hunter Web App </h1>
+<div id="main"> 
+<div id="searchBar"> 
+<input type="text" placeholder="Enter Company Name" />
+<input type="button" id="search" value="Search" />
+<input type="button" id="advSearc" value="Advanced Search" />
+<div id="advancedSearchFilters">
+<!-- this will be toggled visible and invisible when advanced search is pressed -->
+<input type="button" id="submitAdv" value="Search" />
+<input type="button" id="closeAdv" value="Close Advanced Search" />
+<div id="filters"> 
+<input type="text" placeholder="Company Name" />
+  <form>
+    <label class="num-rooms">
+      <input type="checkbox" value=""> 1
+    </label>
+    <label class="num-rooms">
+      <input type="checkbox" value=""> 2
+    </label>
+    <label class="num-rooms">
+      <input type="checkbox" value=""> 3
+	 </label>
+	 <label class="num-rooms">
+      <input type="checkbox" value=""> 4
+    </label>
+	<label class="num-rooms">
+      <input type="checkbox" value=""> 5+
+    </label>
+  </form>
+</div>
+</div>
+</div>
+<div id="infoArea">
+<!-- this needs to either include lines with the different info, ex: price, pictures, etc, OR it can display buttons with choices -->
+</div>
+
+</div>
+
 <script src="apartment.js"></script>
 </body>
