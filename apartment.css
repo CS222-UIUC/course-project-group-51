@@ -35,7 +35,7 @@
 	height: 500px; 
 	border: #484848;
 	border-width: 5px;
-	border-style: dashed;
+	border-style: solid;
 	margin: 10px;
 	background-color: #e0d0cc;
 	display: table-cell;
@@ -44,6 +44,7 @@
 }
 body {
 	background-color: #ffc4c1;
+	
 	
 }
 .buttonLabel {
@@ -75,4 +76,14 @@ td{
 }
 .even{
 	background-color:#E8E8E8;
+}
+#next {
+	width:205px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left:auto;
+}
+.button {
+	width: 100px;
+	height: 40px;
 }
