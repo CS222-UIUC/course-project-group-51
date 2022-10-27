@@ -1,12 +1,16 @@
 var apartmentsCompleteList;
 var currentFilteredApartments;
+var currentStartIndex = 0;
 var dummyArrayForTesting = [
 	{Name: "dog", Address: "house", Rent: 100, Bedrooms: 3, Bathrooms: 1}, 
 	{Name: "cat", Address: "house", Rent: 1222, Bedrooms: 2, Bathrooms: 2}, 
 	{Name: "cow", Address: "barn", Rent: 23, Bedrooms: 1, Bathrooms: 3}, 
 	{Name: "pig", Address: "mud", Rent: 10, Bedrooms: 3, Bathrooms: 4}, 
 	{Name: "ant", Address: "ant hill", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
-	{Name: "duck", Address: "pond", Rent: 2, Bedrooms: 6, Bathrooms: 6}
+	{Name: "duck", Address: "pond", Rent: 2, Bedrooms: 6, Bathrooms: 6}, 
+	{Name: "hippo", Address: "zoo", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
+	{Name: "dino", Address: "fossilized", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
+	{Name: "tiger", Address: "jungle", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
 
 ];
 apartmentsCompleteList = dummyArrayForTesting;
@@ -100,17 +104,14 @@ function filterByNumBathrooms(apartments) {
 	return filtered;
 }
 function filterByType(apartments) {
-	//another filter function 
 	var filtered = apartments;
 	return filtered;
 }
 function filterByGreen(apartments) {
-	//another filter function 
 	var filtered = apartments;
 	return filtered;
 }
 function filterByTown(apartments) {
-	//another filter function 
 	var filtered = apartments;
 	return filtered;
 }
@@ -123,7 +124,6 @@ function sortFilteredApartments(apartments) {
 	//should we allow user to choose sort type? 
 }
 function displayApartment(apartment, lineNumber) {
-	//will display a single apartment 
 	console.log("displaying apartment");
 	console.log(apartment);
 	var tableRow = document.getElementById((lineNumber + 1).toString());
@@ -137,13 +137,19 @@ function displayApartment(apartment, lineNumber) {
 }
 document.getElementById("previousSet").addEventListener("click", displayPreviousSet);
 function displayPreviousSet() {
-	//might need parameters 
-	//will take previous 6 apartments and display them if possible
+	if (currentStartIndex - 6 < 0) return;
+	clearCells();
+	currentStartIndex -= 6;
+	displayApartments(currentFilteredApartments, currentStartIndex);
+	
 }
 document.getElementById("nextSet").addEventListener("click", displayNextSet);
 function displayNextSet() {
-	//might need parameters 
-	//will take next 6 apartments and display them if possible 
+	if (currentStartIndex + 6 > currentFilteredApartments.length) return;
+	clearCells();
+	currentStartIndex += 6;
+	displayApartments(currentFilteredApartments, currentStartIndex);
+	
 }
 
 window.addEventListener("load", getAllApartments);
@@ -160,6 +166,10 @@ function getAllApartments() {
 	displayApartments(apartmentsCompleteList, 0);
 }
 function search() {
+	if (document.getElementById("mainSearch").value == "") {
+		displayApartments(apartmentsCompleteList, 0);
+		return;
+	}
 	var filtered = [];
 	var name = document.getElementById("mainSearch").value;
 	for (var index = 0; index < apartmentsCompleteList.length; ++index) {
@@ -187,15 +197,14 @@ function clearCells() {
 	}
 }
 function displayApartments(filteredApartments, startIndex) {
+	currentFilteredApartments = filteredApartments;
 	clearCells();
 	if (filteredApartments == null) return;
-	for (var lineNum = 0; lineNum < filteredApartments.length; lineNum++) {
+	for (var lineNum = 0; lineNum < filteredApartments.length - currentStartIndex; lineNum++) {
 		if (lineNum < 6) {
 			displayApartment(filteredApartments[startIndex + lineNum], lineNum);
 		}
 	} 
-	//will need to somehow save the filtered apartments so that when 
-	//the next button is clicked, the next 6 apartments will show
 	
 }
 document.getElementById("clearSearch").addEventListener("click", clearSearch);
