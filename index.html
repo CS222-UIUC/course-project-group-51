@@ -9,9 +9,10 @@
 <h1 id="header"> Apartment Hunter Web App </h1>
 <div id="main"> 
 <div id="searchBar"> 
-<input type="text" placeholder="Enter Company Name" />
+<input type="text" id="mainSearch" placeholder="Company Name" />
 <input type="button" id="search" value="Search" />
-<input type="button" id="advSearc" value="Advanced Search" />
+<input type="button" id="advSearc" value="Advanced" />
+<input type="button" id="clearSearch" value="Clear Search" />
 </div>
 <div id="advancedSearchFilters" class="row">
 <!-- this will be toggled visible and invisible when advanced search is pressed -->
@@ -190,8 +191,8 @@
 </table>
 <!-- this needs to either include lines with the different info, ex: price, pictures, etc, OR it can display buttons with choices -->
 <div id="next">
-<input type="button" class="button" value="Previous">
-<input type="button" class="button" value="Next">
+<input type="button" class="button" id="previousSet" value="Previous">
+<input type="button" class="button" id="nextSet" value="Next">
 </div>
 </div>
 
