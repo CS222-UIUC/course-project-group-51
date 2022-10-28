@@ -1,10 +1,33 @@
-name: Lint
+name: Pylint
 
 on: [push]
 
 jobs:
-  eslint:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
     steps:
-      - uses: actions/checkout@v1
-      - uses: stefanoeb/eslint-action@1.0.2
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    # add more dependencies as we start developing
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+        pip install discord.py
+        pip install pytest-cov
+        pip install dpytest
+    - name: Analysing the code with pylint
+      run: |
+        pylint $(git ls-files '*.py')
+    - name: Test with pytest & Coverage with pycov
+    #We can create a tests folder and then run pytest /tests in order to run tests on multiple files
+    #Put the files we want to test coverage after --cov=
+    #Running only on run.py for now 
+      run: |
+        pytest ./tests/ --cov=./media_handler --cov-./discord_bot
