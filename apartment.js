@@ -2,15 +2,15 @@ var apartmentsCompleteList;
 var currentFilteredApartments;
 var currentStartIndex = 0;
 var dummyArrayForTesting = [
-	{Name: "dog", Address: "house", Rent: 100, Bedrooms: 3, Bathrooms: 1}, 
-	{Name: "cat", Address: "house", Rent: 1222, Bedrooms: 2, Bathrooms: 2}, 
-	{Name: "cow", Address: "barn", Rent: 23, Bedrooms: 1, Bathrooms: 3}, 
-	{Name: "pig", Address: "mud", Rent: 10, Bedrooms: 3, Bathrooms: 4}, 
-	{Name: "ant", Address: "ant hill", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
-	{Name: "duck", Address: "pond", Rent: 2, Bedrooms: 6, Bathrooms: 6}, 
-	{Name: "hippo", Address: "zoo", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
-	{Name: "dino", Address: "fossilized", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
-	{Name: "tiger", Address: "jungle", Rent: 0, Bedrooms: 2, Bathrooms: 5}, 
+	{Name: "dog", Address: "house", Rent: 100, Bedrooms: 3, Bathrooms: 1, Type: "Apartment"}, 
+	{Name: "cat", Address: "house", Rent: 1222, Bedrooms: 2, Bathrooms: 2, Type: "House"}, 
+	{Name: "cow", Address: "barn", Rent: 23, Bedrooms: 1, Bathrooms: 3, Type: "Apartment"}, 
+	{Name: "pig", Address: "mud", Rent: 10, Bedrooms: 3, Bathrooms: 4, Type: "House"}, 
+	{Name: "ant", Address: "ant hill", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
+	{Name: "duck", Address: "pond", Rent: 2, Bedrooms: 6, Bathrooms: 6, Type: "House"}, 
+	{Name: "hippo", Address: "zoo", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
+	{Name: "dino", Address: "fossilized", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "House"}, 
+	{Name: "tiger", Address: "jungle", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
 
 ];
 apartmentsCompleteList = dummyArrayForTesting;
@@ -40,8 +40,8 @@ function applyFilters(apartments) {
 	filtered = filterByMaxRent(filtered);
 	filtered = filterByNumBedrooms(filtered);
 	filtered = filterByNumBathrooms(filtered);
-	/*
 	filtered = filterByType(filtered);
+	/*
 	filtered = filterByGreen(filtered);
 	filtered = filterByTown(filtered);
 	*/
@@ -55,7 +55,7 @@ function filterByCompanyName(apartments) {
 	var name = document.getElementById("company").value;
 	for (var index = 0; index < apartments.length; ++index) {
 		if (apartments[index].Name == name) {
-			console.log(apartments[index]);
+			//console.log(apartments[index]);
 			filtered.push(apartments[index]);
 		}
 	}
@@ -74,17 +74,6 @@ function filterByMaxRent(apartments) {
 	return filtered;
 }
 function filterByNumBedrooms(apartments) {
-	/*
-	pseudocode: 
-	create array of ints created by pulling bools from checkboxes and 
-		adding if bool is true 
-	create new array 
-	for apartment in apartments: 
-		for num in numRoomsArray:
-			if apartment.numBedrooms == num: 
-				add apartment to array 
-	return new array 
-	*/
 	var possibilities = [];
 	var checkboxes = document.getElementsByClassName("bedrooms");
 	for (var i = 0; i < checkboxes.length; ++i) {
@@ -92,38 +81,22 @@ function filterByNumBedrooms(apartments) {
 			possibilities.push(checkboxes[i].name);
 		}
 	}
-	console.log(possibilities);
-	//get all checkboxes 
+	if (possibilities.length == 0) return apartments;
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
 			if (apartments[index]["Bedrooms"] == parseFloat(possibilities[number])) {
 				filtered.push(apartments[index]);
-				console.log(apartments[index]["Bedrooms"]);
-				console.log(parseFloat(possibilities[number]));
 				break;
 			} else if (apartments[index]["Bedrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
 				break;
 			}
-			//check number vs possibility 
-			//push if the possibility matches 
 		}
 	}
 	return filtered;
 }
 function filterByNumBathrooms(apartments) {
-	/*
-	pseudocode: 
-	create array of ints created by pulling bools from checkboxes and 
-		adding if bool is true 
-	create new array 
-	for apartment in apartments: 
-		for num in numRoomsArray:
-			if apartment.numBathrooms == num: 
-				add apartment to array 
-	return new array 
-	*/
 	var possibilities = [];
 	var checkboxes = document.getElementsByClassName("bathrooms");
 	for (var i = 0; i < checkboxes.length; ++i) {
@@ -131,38 +104,38 @@ function filterByNumBathrooms(apartments) {
 			possibilities.push(checkboxes[i].name);
 		}
 	}
-	//get all checkboxes 
+	if (possibilities.length == 0) return apartments;
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
 			if (apartments[index]["Bathrooms"] == parseFloat(possibilities[number])) {
 				filtered.push(apartments[index]);
+				break;
 			} else if (apartments[index]["Bathrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
+				break;
 			}
-			//check number vs possibility 
-			//push if the possibility matches 
 		}
 	}
 	return filtered;
 }
 function filterByType(apartments) {
 	var filtered = [];
-	if (document.getElementById("apartmentType").checked && 
-		document.getElementById("houseType").checked || 
-		!(document.getElementById("apartmentType").checked) && 
-		!(document.getElementById("houseType").checked)) {
+	if ((document.getElementById("apartmentsType").checked && 
+		document.getElementById("houseType").checked) || (
+		!(document.getElementById("apartmentsType").checked) && 
+		!(document.getElementById("houseType").checked))) {
 		return apartments;	
-	} else if (document.getElementById("apartmentType").checked) {
+	} else if (document.getElementById("apartmentsType").checked) {
 		for (var index = 0; index < apartments.length; ++index) {
-			if (apartments[index][Type] == "Apartment") {
+			if (apartments[index]["Type"] == "Apartment") {
 				filtered.push(apartments[index]);
 			}
 		}
 		return filtered;
 	} else {
 		for (var index = 0; index < apartments.length; ++index) {
-			if (apartments[index][Type] == "House") {
+			if (apartments[index]["Type"] == "House") {
 				filtered.push(apartments[index]);
 			}	
 		}
@@ -190,8 +163,6 @@ function sortFilteredApartments(apartments) {
 	//should we allow user to choose sort type? 
 }
 function displayApartment(apartment, lineNumber) {
-	console.log("displaying apartment");
-	console.log(apartment);
 	var tableRow = document.getElementById((lineNumber + 1).toString());
 	var dataCells = tableRow.getElementsByTagName("td");
 	dataCells[0].innerHTML = apartment.Name;
@@ -247,7 +218,6 @@ function search() {
 }
 function advancedSearch() {
 	var filtered = applyFilters(apartmentsCompleteList);
-	console.log(filtered.length);
 	displayApartments(filtered, 0);
 }
 function clearCells() {
