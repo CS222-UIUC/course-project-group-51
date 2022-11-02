@@ -2,15 +2,15 @@ var apartmentsCompleteList;
 var currentFilteredApartments;
 var currentStartIndex = 0;
 var dummyArrayForTesting = [
-	{Name: "dog", Address: "house", Rent: 100, Bedrooms: 3, Bathrooms: 1, Type: "Apartment"}, 
-	{Name: "cat", Address: "house", Rent: 1222, Bedrooms: 2, Bathrooms: 2, Type: "House"}, 
-	{Name: "cow", Address: "barn", Rent: 23, Bedrooms: 1, Bathrooms: 3, Type: "Apartment"}, 
-	{Name: "pig", Address: "mud", Rent: 10, Bedrooms: 3, Bathrooms: 4, Type: "House"}, 
-	{Name: "ant", Address: "ant hill", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
-	{Name: "duck", Address: "pond", Rent: 2, Bedrooms: 6, Bathrooms: 6, Type: "House"}, 
-	{Name: "hippo", Address: "zoo", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
-	{Name: "dino", Address: "fossilized", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "House"}, 
-	{Name: "tiger", Address: "jungle", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
+	{Name: "dog", Address: "in Champaign", Rent: 100, Bedrooms: 3, Bathrooms: 1, Type: "Apartment"}, 
+	{Name: "cat", Address: "1234 Lincoln Ave., Urbana, IL", Rent: 1222, Bedrooms: 2, Bathrooms: 2, Type: "House"}, 
+	{Name: "cow", Address: "Urbana", Rent: 23, Bedrooms: 1, Bathrooms: 3, Type: "Apartment"}, 
+	{Name: "pig", Address: "888 Champaign", Rent: 10, Bedrooms: 3, Bathrooms: 4, Type: "House"}, 
+	{Name: "ant", Address: "Champaign's ant hill", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
+	{Name: "duck", Address: "pond in Urbana", Rent: 2, Bedrooms: 6, Bathrooms: 6, Type: "House"}, 
+	{Name: "hippo", Address: "zoo Champaign", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
+	{Name: "dino", Address: "Urbana and Champaign fossilized", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "House"}, 
+	{Name: "tiger", Address: "jungle UChampaign", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
 
 ];
 apartmentsCompleteList = dummyArrayForTesting;
@@ -50,8 +50,8 @@ function applyFilters(apartments) {
 	filtered = filterByType(filtered);
 	/*
 	filtered = filterByGreen(filtered);
-	filtered = filterByTown(filtered);
 	*/
+	filtered = filterByTown(filtered);
 	//need to do a bunch of calls to filterOneCheckbox
 		//have to figure out what the attribute parameter will be first 
 	return filtered;
@@ -154,7 +154,24 @@ function filterByGreen(apartments) {
 	return filtered;
 }
 function filterByTown(apartments) {
-	var filtered = apartments;
+	if (document.getElementById("Urbana").checked == 
+		document.getElementById("Champaign").checked) {
+		return apartments;	
+	}
+	var filtered = [];
+	if (document.getElementById("Urbana").checked) {
+		for (var a = 0; a < apartments.length; ++a) {
+			if (apartments[a].Address.includes("Urbana")) {
+				filtered.push(apartments[a]);
+			}
+		}
+	} else if (document.getElementById("Champaign").checked) {
+		for (var a = 0; a < apartments.length; ++a) {
+			if (apartments[a].Address.includes("Champaign")) {
+				filtered.push(apartments[a]);
+			}
+		}
+	}
 	return filtered;
 }
 function filterOneCheckbox(apartments, attribute) {
