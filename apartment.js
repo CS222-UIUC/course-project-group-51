@@ -14,7 +14,7 @@ var dummyArrayForTesting = [
 
 ];
 apartmentsCompleteList = dummyArrayForTesting;
-
+//note to self: add flexbox div for sort functionality and implement fxns for it 
 
 document.getElementById("advSearc").addEventListener("click",openAdvSearch);
 document.getElementById("closeAdv").addEventListener("click", closeAdvSearch);
@@ -38,9 +38,9 @@ document.getElementById("submitAdv").addEventListener("click", advancedSearch);
 function applyFilters(apartments) {
 	filtered = filterByCompanyName(apartments);
 	filtered = filterByMaxRent(filtered);
-	/*
 	filtered = filterByNumBedrooms(filtered);
 	filtered = filterByNumBathrooms(filtered);
+	/*
 	filtered = filterByType(filtered);
 	filtered = filterByGreen(filtered);
 	filtered = filterByTown(filtered);
@@ -85,7 +85,31 @@ function filterByNumBedrooms(apartments) {
 				add apartment to array 
 	return new array 
 	*/
-	var filtered = apartments;
+	var possibilities = [];
+	var checkboxes = document.getElementsByClassName("bedrooms");
+	for (var i = 0; i < checkboxes.length; ++i) {
+		if (checkboxes[i].checked) {
+			possibilities.push(checkboxes[i].name);
+		}
+	}
+	console.log(possibilities);
+	//get all checkboxes 
+	var filtered = [];
+	for (var index = 0; index < apartments.length; ++index) {
+		for (var number = 0; number < possibilities.length; ++number) {
+			if (apartments[index]["Bedrooms"] == parseFloat(possibilities[number])) {
+				filtered.push(apartments[index]);
+				console.log(apartments[index]["Bedrooms"]);
+				console.log(parseFloat(possibilities[number]));
+				break;
+			} else if (apartments[index]["Bedrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+				filtered.push(apartments[index]);
+				break;
+			}
+			//check number vs possibility 
+			//push if the possibility matches 
+		}
+	}
 	return filtered;
 }
 function filterByNumBathrooms(apartments) {
@@ -100,12 +124,50 @@ function filterByNumBathrooms(apartments) {
 				add apartment to array 
 	return new array 
 	*/
-	var filtered = apartments;
+	var possibilities = [];
+	var checkboxes = document.getElementsByClassName("bathrooms");
+	for (var i = 0; i < checkboxes.length; ++i) {
+		if (checkboxes[i].checked) {
+			possibilities.push(checkboxes[i].name);
+		}
+	}
+	//get all checkboxes 
+	var filtered = [];
+	for (var index = 0; index < apartments.length; ++index) {
+		for (var number = 0; number < possibilities.length; ++number) {
+			if (apartments[index]["Bathrooms"] == parseFloat(possibilities[number])) {
+				filtered.push(apartments[index]);
+			} else if (apartments[index]["Bathrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+				filtered.push(apartments[index]);
+			}
+			//check number vs possibility 
+			//push if the possibility matches 
+		}
+	}
 	return filtered;
 }
 function filterByType(apartments) {
-	var filtered = apartments;
-	return filtered;
+	var filtered = [];
+	if (document.getElementById("apartmentType").checked && 
+		document.getElementById("houseType").checked || 
+		!(document.getElementById("apartmentType").checked) && 
+		!(document.getElementById("houseType").checked)) {
+		return apartments;	
+	} else if (document.getElementById("apartmentType").checked) {
+		for (var index = 0; index < apartments.length; ++index) {
+			if (apartments[index][Type] == "Apartment") {
+				filtered.push(apartments[index]);
+			}
+		}
+		return filtered;
+	} else {
+		for (var index = 0; index < apartments.length; ++index) {
+			if (apartments[index][Type] == "House") {
+				filtered.push(apartments[index]);
+			}	
+		}
+		return filtered;
+	}
 }
 function filterByGreen(apartments) {
 	var filtered = apartments;
@@ -116,6 +178,10 @@ function filterByTown(apartments) {
 	return filtered;
 }
 function filterOneCheckbox(apartments, attribute) {
+	if (document.getElementById(attribute).checked) {
+		//create filtered list 
+		//need to figure out what part of dictionary they will fall under
+	} else return apartments;
 	//arbitrary function that will work for all filters in second column 
 	//will pull selection based on what attribute is and filter based on that 
 }
@@ -207,8 +273,20 @@ function displayApartments(filteredApartments, startIndex) {
 	} 
 	
 }
+function clearBoxes() {
+	var checkboxes = document.getElementsByTagName("input");
+	for (var c = 0; c < checkboxes.length; ++c) {
+		if (checkboxes[c].type != "button") {
+			checkboxes[c].value = "";
+			checkboxes[c].checked = false;
+		}
+	}
+	
+}
 document.getElementById("clearSearch").addEventListener("click", clearSearch);
 function clearSearch() {
 	clearCells();
+	clearBoxes();
+	currentStartIndex = 0;
 	displayApartments(apartmentsCompleteList, 0);
 }
