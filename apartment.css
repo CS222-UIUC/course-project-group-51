@@ -14,6 +14,9 @@
 #mainSearch {
 	width: 150px;
 }
+#searchBar {
+	height: 10px;
+}
 #columns {
 	display: flex;
 	flex-direction: row;

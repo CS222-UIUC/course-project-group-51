@@ -24,6 +24,10 @@ function openAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "visible";
 	document.getElementById("advancedSearchFilters").style.width = "400px";
 	document.getElementById("advancedSearchFilters").style.height	= "330px";
+	document.getElementById("searchBar").style.visibility = "hidden";
+	document.getElementById("searchBar").style.width = "0px";
+	document.getElementById("searchBar").style.height = "0px";
+	
 }
 
 //function closes the advanced search filter box and shrinks it to take up no space
@@ -31,6 +35,9 @@ function closeAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "hidden";
 	document.getElementById("advancedSearchFilters").style.width = "0px";
 	document.getElementById("advancedSearchFilters").style.height	= "0px";
+	document.getElementById("searchBar").style.visibility = "visible";
+	document.getElementById("searchBar").style.width = "450px";
+	document.getElementById("searchBar").style.height = "10px";
 }
 document.getElementById("search").addEventListener("click", search);
 document.getElementById("submitAdv").addEventListener("click", advancedSearch);
@@ -168,7 +175,7 @@ function displayApartment(apartment, lineNumber) {
 	dataCells[0].innerHTML = apartment.Name;
 	dataCells[1].innerHTML = apartment.Address;
 	dataCells[2].innerHTML = apartment.Rent;
-	dataCells[3].innerHTML = apartment.Rent;
+	dataCells[3].innerHTML = apartment.Type;
 	dataCells[4].innerHTML = apartment.Bedrooms;
 	dataCells[5].innerHTML = apartment.Bathrooms;
 }
@@ -254,6 +261,7 @@ function clearBoxes() {
 	
 }
 document.getElementById("clearSearch").addEventListener("click", clearSearch);
+document.getElementById("clearFilters").addEventListener("click", clearSearch);
 function clearSearch() {
 	clearCells();
 	clearBoxes();
