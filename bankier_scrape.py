@@ -16,7 +16,7 @@ avail_units = 0
 csv_file = open('bankier_scrape.csv', 'w')
 
 csv_writer = csv.writer(csv_file)
-csv_writer.writerow(['Title', 'Address'])
+csv_writer.writerow(['Company', 'Title', 'Address'])
 
 # art = soup.find('span', class_ = "title").text
 # print(art)
@@ -34,10 +34,13 @@ for article in soup.find_all('span', class_ = "address"):
     addresses.append(article.text)
 
 for i in range(0, len(titles)):
-    csv_writer.writerow([titles[i], addresses[i]])
+    csv_writer.writerow(["Bankier", titles[i], addresses[i]])
 
 
 print("done")
 
 csv_file.close()
+
+# project_href = [i['href'] for i in soup.find_all('a', href=True)]
+# print(project_href)
 
