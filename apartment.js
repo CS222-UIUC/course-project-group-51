@@ -15,6 +15,7 @@ var dummyArrayForTesting = [
 ];
 function getBankierApartments() {
 	//read csv 
+	var reader = new FileReader();
 }
 function getJSMApartments() {
 	//read csv 
