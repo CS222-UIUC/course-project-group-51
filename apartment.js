@@ -222,7 +222,8 @@ function getAllApartments() {
 	//array will need to be a global variable most likely
 		//will put the info into apartmentsCompleteList
 	//probably an array of dictionaries so that we can access the different properties\
-	
+	//need a way to add amenities into dictionary 
+	//most likely with use while and for loops to deal with csv
 	sortFilteredApartments(apartmentsCompleteList);
 	displayApartments(apartmentsCompleteList, 0);
 }
