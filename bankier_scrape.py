@@ -1,7 +1,7 @@
 """ Scrapes data from Bankier Apartments """
 import csv
-from bs4 import BeautifulSoup
-import requests
+from bs4 import BeautifulSoup #pylint: disable=E0401
+import requests #pylint: disable=E0401
 
 
 # source = requests.get('https://www.smilestudentliving.com/availability').text

@@ -1,7 +1,7 @@
 """ Scrapes data from Ramshaw Apartments """
 import csv
-from bs4 import BeautifulSoup
-import requests
+from bs4 import BeautifulSoup #pylint: disable=E0401
+import requests #pylint: disable=E0401
 
 def contains_number(value):
     """ Checks if a string contains a digit """
