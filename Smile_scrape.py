@@ -1,14 +1,14 @@
 # https://medium.com/@raiyanquaium/how-to-web-scrape-using-beautiful-soup-in-python-without-running-into-http-error-403-554875e5abed
-from urllib.request import Request, urlopen
-from bs4 import BeautifulSoup
-import requests
-import csv
-from selenium import webdriver
+# from urllib.request import Request, urlopen
+# from bs4 import BeautifulSoup
+# import requests
+# import csv
+# from selenium import webdriver
 
-d = webdriver.Chrome(r'C:\Users\User\Documents\chromedriver.exe')
-d.get('https://www.smilestudentliving.com/availability')
-print(d.find_element_by_class_name('listing-item').text)
-d.quit()
+# d = webdriver.Chrome(r'C:\Users\User\Documents\chromedriver.exe')
+# d.get('https://www.smilestudentliving.com/availability')
+# print(d.find_element_by_class_name('listing-item').text)
+# d.quit()
 
 # url = 'https://www.smilestudentliving.com/availability'
 # source = Request(url, headers= {'User-Agent': 'Mozilla/5.0'})
