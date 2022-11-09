@@ -13,6 +13,18 @@ var dummyArrayForTesting = [
 	{Name: "tiger", Address: "jungle UChampaign", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
 
 ];
+function getBankierApartments() {
+	//read csv 
+}
+function getJSMApartments() {
+	//read csv 
+}
+function getRamshawApartments() {
+	//read csv
+}
+function getSmileApartments() {
+	//readcsv
+}
 apartmentsCompleteList = dummyArrayForTesting;
 //note to self: add flexbox div for sort functionality and implement fxns for it 
 
@@ -223,6 +235,10 @@ function getAllApartments() {
 		//will put the info into apartmentsCompleteList
 	//probably an array of dictionaries so that we can access the different properties\
 	
+	getBankierApartments();
+	getJSMApartments();
+	getRamshawApartments();
+	getSmileApartments();
 	sortFilteredApartments(apartmentsCompleteList);
 	displayApartments(apartmentsCompleteList, 0);
 }
