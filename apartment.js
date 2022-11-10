@@ -541,7 +541,7 @@ function clearCells() {
 		dataCells[2].innerHTML = "";
 		dataCells[3].innerHTML = "";
 		dataCells[4].innerHTML = "";
-		//dataCells[5].innerHTML = "";
+		dataCells[5].innerHTML = "";
 	}
 }
 function displayApartments(filteredApartments, startIndex) {
@@ -550,6 +550,8 @@ function displayApartments(filteredApartments, startIndex) {
 	if (filteredApartments == null) return;
 	for (var lineNum = 0; lineNum < filteredApartments.length - currentStartIndex; lineNum++) {
 		if (lineNum < 6) {
+			console.log(lineNum);
+			console.log(currentStartIndex);
 			displayApartment(filteredApartments[startIndex + lineNum], lineNum);
 		}
 	} 
