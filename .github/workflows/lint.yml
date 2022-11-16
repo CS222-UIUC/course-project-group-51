@@ -29,5 +29,5 @@ jobs:
     #We can create a tests folder and then run pytest /tests in order to run tests on multiple files
     #Put the files we want to test coverage after --cov=
     #Running only on run.py for now 
-      run: |
-        pytest ./tests/ --cov=./media_handler 
+    #  run: |
+       # pytest ./tests/ --cov=./media_handler 
