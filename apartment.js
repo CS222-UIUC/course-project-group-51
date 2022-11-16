@@ -318,7 +318,9 @@ function filterByNumBedrooms(apartments) {
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
-			if (apartments[index]["Bedrooms"] == parseFloat(possibilities[number])) {
+			var str = apartments[index]["Bedrooms"];
+			if (str == undefined) str = "";
+			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
 			} else if (apartments[index]["Bedrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
@@ -341,7 +343,9 @@ function filterByNumBathrooms(apartments) {
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
-			if (apartments[index]["Bathrooms"] == parseFloat(possibilities[number])) {
+			var str = apartments[index]["Bathrooms"];
+			if (str == undefined) str = "";
+			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
 			} else if (apartments[index]["Bathrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
