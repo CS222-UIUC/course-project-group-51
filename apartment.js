@@ -283,7 +283,7 @@ function filterByCompanyName(apartments) {
 	var filtered = [];
 	var name = document.getElementById("company").value;
 	for (var index = 0; index < apartments.length; ++index) {
-		if (apartments[index].Name == name) {
+		if (apartments[index].Company == name) {
 			//console.log(apartments[index]);
 			filtered.push(apartments[index]);
 		}
@@ -460,7 +460,7 @@ function search() {
 	var filtered = [];
 	var name = document.getElementById("mainSearch").value;
 	for (var index = 0; index < apartmentsCompleteList.length; ++index) {
-		if (apartmentsCompleteList[index].Name == name) {
+		if (apartmentsCompleteList[index].Company == name) {
 			filtered.push(apartmentsCompleteList[index]);
 		}
 	}
