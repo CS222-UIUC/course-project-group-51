@@ -1,7 +1,7 @@
 """ Scrapes data from Ramshaw Apartments """
 import csv
-from bs4 import BeautifulSoup
-import requests
+from bs4 import BeautifulSoup #pylint: disable=E0401
+import requests #pylint: disable=E0401
 
 def contains_number(value):
     """ Checks if a string contains a digit """
@@ -22,35 +22,34 @@ source = requests.get('https://ramshaw.com/apartments-for-rent/', timeout=10).te
 soup = BeautifulSoup(source, 'lxml')
 AVAIL_UNITS = 0
 
-csv_file = open('ramshaw_scrape.csv', 'w', encoding='utf8')
+with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(['Company', 'Address'])
 
-csv_writer = csv.writer(csv_file)
-csv_writer.writerow(['Company', 'Address'])
+    addresses = []
 
-addresses = []
+    project_href = [i['title'] for i in soup.find_all('a', title =True)]
 
-project_href = [i['title'] for i in soup.find_all('a', title =True)]
+    # print(project_href)
 
-# print(project_href)
+    # for i in project_href:
+    #     if (i[0] != '"'):
+    #         project_href.remove(i)
 
-# for i in project_href:
-#     if (i[0] != '"'):
-#         project_href.remove(i)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
+    project_href.pop(0)
 
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
-project_href.pop(0)
+    project_href = project_href[::2]
 
-project_href = project_href[::2]
-
-for i in project_href:
-    csv_writer.writerow(["Ramshaw", i])
+    for i in project_href:
+        csv_writer.writerow(["Ramshaw", i])
 
 
 # for i in project_href:
@@ -60,5 +59,3 @@ for i in project_href:
 #         addresses.append(chunk)
 
 # print(addresses)
-
-csv_file.close()
