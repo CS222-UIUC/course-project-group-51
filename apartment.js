@@ -74,8 +74,7 @@ Bankier,Park Place Tower,"202 E Green St, Champaign, IL
 Bankier,406 E. Green St.,"406 E Green St, Champaign, IL"
 Bankier,624 S. 5th St.,"624 S 5th St, Champaign, IL"
 Bankier,403 E. Green St.,"403 E Green St, Champaign, IL"
-Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"
-`;
+Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"`;
 var ramshawData = `Company,Address
 Ramshaw,"1002 S. Second St., Champaign"
 Ramshaw,"1010 S. First St., Champaign"
@@ -156,8 +155,7 @@ Ramshaw,"Southwest Place – 2510 Myers, Champaign"
 Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign"
 Ramshaw,"Southwest Place- 1907 Nancy, Champaign"
 Ramshaw,"Stratford Residences, Urbana"
-Ramshaw,"Tuscany Ridge, Champaign"
-`;
+Ramshaw,"Tuscany Ridge, Champaign"`;
 var apartmentsCompleteList = [];
 var currentFilteredApartments;
 var currentStartIndex = 0;
@@ -182,9 +180,17 @@ function getBankierApartments() {
 
 	 const arr = rows.map(function (row) {
     const values = row.split(delimiter);
-	const address = values[2] + "," + values[3];
+	var address1 = values[2];
+	if (address1 == undefined) address1 = "";
+	else if (address1.substring(0,1) == "\"") address1 = address1.substring(1);
+	if (address1.substring(address1.length - 1) == "\"") address1 = address1.substring(0, address1.length - 1);
+	const address = address1 + "," + values[3];
     const el = headers.reduce(function (object, header, index) {
-      object[header] = values[index];
+	  var strs = values[index];
+	  if (strs == undefined) strs = " ";
+	  if (strs.substring(0,1) == "\"") strs = strs.substring(1);
+	  if (strs.substring(strs.length - 1) == "\"") strs = strs.substring(0, strs.length - 1);
+      object[header] = strs;
 	  object["Address"] = address;
       return object;
     }, {});
@@ -205,7 +211,11 @@ function getJSMApartments() {
 	 const arr = rows.map(function (row) {
     const values = row.split(delimiter);
     const el = headers.reduce(function (object, header, index) {
-      object[header] = values[index];
+	  var str = values[index];
+	  if (str == undefined) str = "";
+	  if (str.substring(0,1) == "\"") str = str.substring(1);
+	  if (str.substring(str.length - 1) == "\"") str = str.substring(0, str.length - 1);
+      object[header] = str;
       return object;
     }, {});
     return el;
@@ -223,9 +233,20 @@ function getRamshawApartments() {
 
 	 const arr = rows.map(function (row) {
     const values = row.split(delimiter);
-	const address = values[1] + "," + values[2];
+	var address1 = values[1];
+	if (address1 == undefined) address1 = "";
+	else if (address1.substring(0,1) == "\"") address1 = address1.substring(1);
+	if (address1.substring(address1.length - 1) == "\"") address1 = address1.substring(0, address1.length - 1);
+	if (values[2] != undefined) {
+		if (values[2].substring(values[2].length - 1) == "\"") values[2] = values[2].substring(0,values[2].length - 1);
+	}
+	const address = address1 + "," + values[2];
     const el = headers.reduce(function (object, header, index) {
-      object[header] = values[index];
+	  var strs = values[index];
+	  if (strs == undefined) strs = "";
+	  if (strs.substring(0,1) == "\"") strs = strs.substring(1);
+	  if (strs.substring(strs.length - 1) == "\"") strs = strs.substring(0, strs.length - 1);
+      object[header] = strs;
 	  object["Address"] = address;
       return object;
     }, {});
