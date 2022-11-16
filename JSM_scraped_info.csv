@@ -1,64 +1,64 @@
-Address,Rent,Bedrooms,Bathrooms
-102 E. Gregory,$1065,1 Beds,1 Bath
-102 E. Gregory,$1380-1530,2 Beds,1 Bath
-102 E. Gregory,$3520,6 Beds,3 Bath
-105 E. Chalmers,$1265,2 Beds,1 Bath
-105 E. Chalmers,$750-860,1 Beds,1 Bath
-105 E. Green,$840-860,0 Beds,1 Bath
-105 E. Chalmers,$745,0 Beds,1 Bath
-107 E. Chalmers,$1815,3 Beds,1 Bath
-110 S. Gregory,$685-765,1 Beds,1 Bath
-110 S. Gregory,$640,0 Beds,1 Bath
-201 S. Wright,$1040-1155,1 Beds,1 Bath
-201 E. Healey,$1760,3 Beds,2 Bath
-203 E. Stoughton,$800-820,1 Beds,1 Bath
-301 S. Water,$2180-2330,4 Beds,2 Bath
-302 S. Fourth,$1330-1350,2 Beds,1 Bath
-303 S. Wright,$1340-1370,2 Beds,1 Bath
-306 E. Armory,$3175,5 Beds,2 Bath
-307 E. Armory,$580-595,0 Beds,1 Bath
-308 E. Armory,$1640,2 Beds,2 Bath
-308 E. Armory,$1035,0 Beds,1 Bath
-401 E. Chalmers,$625-645,0 Beds,1 Bath
-401 E. Chalmers,$855-875,1 Beds,1 Bath
-403 E. White,$1330-1350,2 Beds,1 Bath
-405 E. White,$1130,1 Beds,1 Bath
-405 E. White,$730,0 Beds,1 Bath
-405 E. White,$1045,2 Beds,1 Bath
-406 E. Clark,$785,1 Beds,1 Bath
-408 E. Stoughton,$885-1055,1 Beds,1 Bath
-408 E. White,$1890,3 Beds,1 Bath
-408 E. Stoughton,$1410,2 Beds,1 Bath
-408 E. Stoughton,$760-805,0 Beds,1 Bath
-408 E. White,$1350,2 Beds,1 Bath
-501 E. Healey,$1980,3 Beds,2 Bath
-502 E. White,$660-795,0 Beds,1 Bath
-502 E. John,$1690,2 Beds,2 Bath
-505 E. Clark,$765-795,0 Beds,1 Bath
-505 E. Healey,$1980,3 Beds,2 Bath
-505 E. Healey,$3250,5 Beds,3 Bath
-508 E. Stoughton,$1340,2 Beds,1 Bath
-508 E. Stoughton,$885,1 Beds,1 Bath
-510 E. Green,$1970,3 Beds,1 Bath
-601 S. Sixth,$1210,1 Beds,1 Bath
-601 E. White,$905-925,1 Beds,1 Bath
-601 S. Sixth,$1545-1760,2 Beds,1 Bath
-602 E. Clark,$695-850,0 Beds,1 Bath
-603 E. White,$905-925,1 Beds,1 Bath
-604 E. Clark,$1170,2 Beds,1 Bath
-605 E. White,$905-925,1 Beds,1 Bath
-607 E. White,$905-925,1 Beds,1 Bath
-700 S. Gregory,$880-1220,1 Beds,1 Bath
-700 S. Gregory,$1220,2 Beds,1 Bath
-701 S. Gregory,$1150,2 Beds,1 Bath
-701 S. Gregory,$850-1150,1 Beds,1 Bath
-707 S. Sixth,$1230-1440,2 Beds,1 Bath
-707 S. Sixth,$1065-1185,1 Beds,1 Bath
-902 S. Lincoln,$945-1150,1 Beds,1 Bath
-902 S. Lincoln,$1570,2 Beds,2 Bath
-902 S. Lincoln,$1470,2 Beds,1 Bath
-1103 S. Euclid,$1470,2 Beds,1 Bath
-1103 S. Euclid,$1935,3 Beds,1 Bath
-1103 S. Euclid,$3185,5 Beds,2 Bath
-102 E. Gregory,$1065,1 Beds,1 Bath
-102 E. Gregory,$1380-1530,2 Beds,1 Bath
+Company,Address,Rent,Bedrooms,Bathrooms
+JSM,102 E. Gregory,"$1,065 ",1 Beds,1 Bath
+JSM,102 E. Gregory,$1380-1530,2 Beds,1 Bath
+JSM,102 E. Gregory,"$3,520 ",6 Beds,3 Bath
+JSM,105 E. Chalmers,"$1,265 ",2 Beds,1 Bath
+JSM,105 E. Chalmers,$750-860,1 Beds,1 Bath
+JSM,105 E. Green,$840-860,0 Beds,1 Bath
+JSM,105 E. Chalmers,$745 ,0 Beds,1 Bath
+JSM,107 E. Chalmers,"$1,815 ",3 Beds,1 Bath
+JSM,110 S. Gregory,$685-765,1 Beds,1 Bath
+JSM,110 S. Gregory,$640 ,0 Beds,1 Bath
+JSM,201 S. Wright,$1040-1155,1 Beds,1 Bath
+JSM,201 E. Healey,"$1,760 ",3 Beds,2 Bath
+JSM,203 E. Stoughton,$800-820,1 Beds,1 Bath
+JSM,301 S. Water,$2180-2330,4 Beds,2 Bath
+JSM,302 S. Fourth,$1330-1350,2 Beds,1 Bath
+JSM,303 S. Wright,$1340-1370,2 Beds,1 Bath
+JSM,306 E. Armory,"$3,175 ",5 Beds,2 Bath
+JSM,307 E. Armory,$580-595,0 Beds,1 Bath
+JSM,308 E. Armory,"$1,640 ",2 Beds,2 Bath
+JSM,308 E. Armory,"$1,035 ",0 Beds,1 Bath
+JSM,401 E. Chalmers,$625-645,0 Beds,1 Bath
+JSM,401 E. Chalmers,$855-875,1 Beds,1 Bath
+JSM,403 E. White,$1330-1350,2 Beds,1 Bath
+JSM,405 E. White,"$1,130 ",1 Beds,1 Bath
+JSM,405 E. White,$730 ,0 Beds,1 Bath
+JSM,405 E. White,"$1,045 ",2 Beds,1 Bath
+JSM,406 E. Clark,$785 ,1 Beds,1 Bath
+JSM,408 E. Stoughton,$885-1055,1 Beds,1 Bath
+JSM,408 E. White,"$1,890 ",3 Beds,1 Bath
+JSM,408 E. Stoughton,"$1,410 ",2 Beds,1 Bath
+JSM,408 E. Stoughton,$760-805,0 Beds,1 Bath
+JSM,408 E. White,"$1,350 ",2 Beds,1 Bath
+JSM,501 E. Healey,"$1,980 ",3 Beds,2 Bath
+JSM,502 E. White,$660-795,0 Beds,1 Bath
+JSM,502 E. John,"$1,690 ",2 Beds,2 Bath
+JSM,505 E. Clark,$765-795,0 Beds,1 Bath
+JSM,505 E. Healey,"$1,980 ",3 Beds,2 Bath
+JSM,505 E. Healey,"$3,250 ",5 Beds,3 Bath
+JSM,508 E. Stoughton,"$1,340 ",2 Beds,1 Bath
+JSM,508 E. Stoughton,$885 ,1 Beds,1 Bath
+JSM,510 E. Green,"$1,970 ",3 Beds,1 Bath
+JSM,601 S. Sixth,"$1,210 ",1 Beds,1 Bath
+JSM,601 E. White,$905-925,1 Beds,1 Bath
+JSM,601 S. Sixth,$1545-1760,2 Beds,1 Bath
+JSM,602 E. Clark,$695-850,0 Beds,1 Bath
+JSM,603 E. White,$905-925,1 Beds,1 Bath
+JSM,604 E. Clark,"$1,170 ",2 Beds,1 Bath
+JSM,605 E. White,$905-925,1 Beds,1 Bath
+JSM,607 E. White,$905-925,1 Beds,1 Bath
+JSM,700 S. Gregory,$880-1220,1 Beds,1 Bath
+JSM,700 S. Gregory,"$1,220 ",2 Beds,1 Bath
+JSM,701 S. Gregory,"$1,150 ",2 Beds,1 Bath
+JSM,701 S. Gregory,$850-1150,1 Beds,1 Bath
+JSM,707 S. Sixth,$1230-1440,2 Beds,1 Bath
+JSM,707 S. Sixth,$1065-1185,1 Beds,1 Bath
+JSM,902 S. Lincoln,$945-1150,1 Beds,1 Bath
+JSM,902 S. Lincoln,"$1,570 ",2 Beds,2 Bath
+JSM,902 S. Lincoln,"$1,470 ",2 Beds,1 Bath
+JSM,1103 S. Euclid,"$1,470 ",2 Beds,1 Bath
+JSM,1103 S. Euclid,"$1,935 ",3 Beds,1 Bath
+JSM,1103 S. Euclid,"$3,185 ",5 Beds,2 Bath
+JSM,102 E. Gregory,"$1,065 ",1 Beds,1 Bath
+JSM,102 E. Gregory,$1380-1530,2 Beds,1 Bath

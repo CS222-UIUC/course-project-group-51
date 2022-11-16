@@ -1,4 +1,258 @@
-var apartmentsCompleteList;
+var jsmData = `Company,Address,Rent,Bedrooms,Bathrooms
+JSM,102 E. Gregory,"$1065 ",1 Beds,1 Bath
+JSM,102 E. Gregory,$1380-1530,2 Beds,1 Bath
+JSM,102 E. Gregory,"$3520 ",6 Beds,3 Bath
+JSM,105 E. Chalmers,"$1265 ",2 Beds,1 Bath
+JSM,105 E. Chalmers,$750-860,1 Beds,1 Bath
+JSM,105 E. Green,$840-860,0 Beds,1 Bath
+JSM,105 E. Chalmers,$745 ,0 Beds,1 Bath
+JSM,107 E. Chalmers,"$1815 ",3 Beds,1 Bath
+JSM,110 S. Gregory,$685-765,1 Beds,1 Bath
+JSM,110 S. Gregory,$640 ,0 Beds,1 Bath
+JSM,201 S. Wright,$1040-1155,1 Beds,1 Bath
+JSM,201 E. Healey,"$1760 ",3 Beds,2 Bath
+JSM,203 E. Stoughton,$800-820,1 Beds,1 Bath
+JSM,301 S. Water,$2180-2330,4 Beds,2 Bath
+JSM,302 S. Fourth,$1330-1350,2 Beds,1 Bath
+JSM,303 S. Wright,$1340-1370,2 Beds,1 Bath
+JSM,306 E. Armory,"$3175 ",5 Beds,2 Bath
+JSM,307 E. Armory,$580-595,0 Beds,1 Bath
+JSM,308 E. Armory,"$1640 ",2 Beds,2 Bath
+JSM,308 E. Armory,"$1035 ",0 Beds,1 Bath
+JSM,401 E. Chalmers,$625-645,0 Beds,1 Bath
+JSM,401 E. Chalmers,$855-875,1 Beds,1 Bath
+JSM,403 E. White,$1330-1350,2 Beds,1 Bath
+JSM,405 E. White,"$1130 ",1 Beds,1 Bath
+JSM,405 E. White,$730 ,0 Beds,1 Bath
+JSM,405 E. White,"$1045 ",2 Beds,1 Bath
+JSM,406 E. Clark,$785 ,1 Beds,1 Bath
+JSM,408 E. Stoughton,$885-1055,1 Beds,1 Bath
+JSM,408 E. White,"$1890 ",3 Beds,1 Bath
+JSM,408 E. Stoughton,"$1410 ",2 Beds,1 Bath
+JSM,408 E. Stoughton,$760-805,0 Beds,1 Bath
+JSM,408 E. White,"$1350 ",2 Beds,1 Bath
+JSM,501 E. Healey,"$1980 ",3 Beds,2 Bath
+JSM,502 E. White,$660-795,0 Beds,1 Bath
+JSM,502 E. John,"$1690 ",2 Beds,2 Bath
+JSM,505 E. Clark,$765-795,0 Beds,1 Bath
+JSM,505 E. Healey,"$1980 ",3 Beds,2 Bath
+JSM,505 E. Healey,"$3250 ",5 Beds,3 Bath
+JSM,508 E. Stoughton,"$1340 ",2 Beds,1 Bath
+JSM,508 E. Stoughton,$885 ,1 Beds,1 Bath
+JSM,510 E. Green,"$1970 ",3 Beds,1 Bath
+JSM,601 S. Sixth,"$1210 ",1 Beds,1 Bath
+JSM,601 E. White,$905-925,1 Beds,1 Bath
+JSM,601 S. Sixth,$1545-1760,2 Beds,1 Bath
+JSM,602 E. Clark,$695-850,0 Beds,1 Bath
+JSM,603 E. White,$905-925,1 Beds,1 Bath
+JSM,604 E. Clark,"$1170 ",2 Beds,1 Bath
+JSM,605 E. White,$905-925,1 Beds,1 Bath
+JSM,607 E. White,$905-925,1 Beds,1 Bath
+JSM,700 S. Gregory,$880-1220,1 Beds,1 Bath
+JSM,700 S. Gregory,"$1220 ",2 Beds,1 Bath
+JSM,701 S. Gregory,"$1150 ",2 Beds,1 Bath
+JSM,701 S. Gregory,$850-1150,1 Beds,1 Bath
+JSM,707 S. Sixth,$1230-1440,2 Beds,1 Bath
+JSM,707 S. Sixth,$1065-1185,1 Beds,1 Bath
+JSM,902 S. Lincoln,$945-1150,1 Beds,1 Bath
+JSM,902 S. Lincoln,"$1570 ",2 Beds,2 Bath
+JSM,902 S. Lincoln,"$1470 ",2 Beds,1 Bath
+JSM,1103 S. Euclid,"$1470 ",2 Beds,1 Bath
+JSM,1103 S. Euclid,"$1935 ",3 Beds,1 Bath
+JSM,1103 S. Euclid,"$3185 ",5 Beds,2 Bath
+JSM,102 E. Gregory,"$1065 ",1 Beds,1 Bath
+JSM,102 E. Gregory,$1380-1530,2 Beds,1 Bath`;
+var bankierData = `
+Company,Title,Address
+
+Bankier,1107 S 2nd St.,"1107 S 2nd St, Champaign, IL"
+
+Bankier,112 E Green,"112 E Green St, Champaign, IL"
+
+Bankier,Skyline Tower,"519 E Green St, Champaign, IL"
+
+Bankier,Skyline West,"509 E Green St, Champaign, IL"
+
+Bankier,509 1/2 E. Green St.,"509 E Green St, Champaign, IL"
+
+Bankier,Skylight Court,"410 E Green St, Champaign, IL"
+
+Bankier,408 E. Green St.,"408 E Green St, Champaign, IL"
+
+Bankier,Park Place Tower,"202 E Green St, Champaign, IL"
+
+Bankier,406 E. Green St.,"406 E Green St, Champaign, IL"
+
+Bankier,624 S. 5th St.,"624 S 5th St, Champaign, IL"
+
+Bankier,403 E. Green St.,"403 E Green St, Champaign, IL"
+
+Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"
+`;
+var ramshawData = `
+Company,Address
+
+Ramshaw,"1002 S. Second St., Champaign"
+
+Ramshaw,"1010 S. First St., Champaign"
+
+Ramshaw,"1012 S. First St., Champaign"
+
+Ramshaw,"102 N. Gregory St, Urbana"
+
+Ramshaw,"107 E. Daniel, Champaign"
+
+Ramshaw,"107 S. Wright St, Champaign"
+
+Ramshaw,"109 W. Church, Savoy"
+
+Ramshaw,"110 & 112 Tomaras Ave, Savoy"
+
+Ramshaw,"1105 W. Main St, Urbana"
+
+Ramshaw,"1105 W. Oregon St., Urbana"
+
+Ramshaw,"1107 W. Oregon St., Urbana"
+
+Ramshaw,"1108 W. Nevada St., Urbana"
+
+Ramshaw,"1110 W. Stoughton St, Urbana"
+
+Ramshaw,"1604B Lyndhurst, Savoy"
+
+Ramshaw,"1606 W. Healey St, Champaign"
+
+Ramshaw,"201 S. Elm St, Champaign"
+
+Ramshaw,"202 Munroe St., Bondville"
+
+Ramshaw,"202 W. Columbia Ave., Champaign"
+
+Ramshaw,"208 W. Washington St., Champaign"
+
+Ramshaw,"209 N. Coler, Urbana"
+
+Ramshaw,"210 W. Washington St., Champaign"
+
+Ramshaw,"212 W. Washington St., Champaign"
+
+Ramshaw,"2407 Carrelton, Champaign"
+
+Ramshaw,"2407 John, Champaign"
+
+Ramshaw,"3 Angela Court, Savoy"
+
+Ramshaw,"302 S. Cedar St., Urbana"
+
+Ramshaw,"303 & 305 E Clark, Champaign"
+
+Ramshaw,"305 E John St., Champaign"
+
+Ramshaw,"308 E. Clark St, Champaign"
+
+Ramshaw,308 W Green St Urbana
+
+Ramshaw,"310 E. Chalmers St., Champaign"
+
+Ramshaw,"310 W. Green St., Urbana"
+
+Ramshaw,"311 Columbia, Champaign"
+
+Ramshaw,"312 Columbia, Champaign"
+
+Ramshaw,"312 W. Springfield Ave., Urbana"
+
+Ramshaw,"312 W. Springfield, Champaign"
+
+Ramshaw,"402 S. Race St., Urbana"
+
+Ramshaw,"404 S. Busey, Urbana"
+
+Ramshaw,"412 Church, Champaign"
+
+Ramshaw,"508 W Columbia, Champaign"
+
+Ramshaw,"509 N Willis Ave, Champaign"
+
+Ramshaw,"509 W. Main St, Urbana"
+
+Ramshaw,"510 S. Mattis Ave, Champaign"
+
+Ramshaw,"59 E. John St., Champaign"
+
+Ramshaw,"605 W. Green St., Urbana"
+
+Ramshaw,"606 W. Healey St, Champaign"
+
+Ramshaw,"616 W. Healey, Champaign"
+
+Ramshaw,"702 W. Western Ave, Urbana"
+
+Ramshaw,"703 W. Park Ave., Champaign"
+
+Ramshaw,"704 Stoughton St., Urbana"
+
+Ramshaw,"705 W. Main St., Urbana"
+
+Ramshaw,"706 S. Locust, Champaign"
+
+Ramshaw,"802 W. Iowa St., Urbana IL"
+
+Ramshaw,"804 W. Church St, Champaign"
+
+Ramshaw,"905 S. Second St., Champaign"
+
+Ramshaw,Busey Lincoln Apartments
+
+Ramshaw,"Capstone Quarters, Champaign"
+
+Ramshaw,"Cobblefield Condos, Champaign"
+
+Ramshaw,"Crescent Drive, Champaign"
+
+Ramshaw,"Kobuck Apartments, Savoy"
+
+Ramshaw,"Park Place – Plymouth, Champaign"
+
+Ramshaw,"Parkland Cove, Champaign"
+
+Ramshaw,"Parkview Apartments – 111 Park, Urbana"
+
+Ramshaw,"Pomona Drive Condos, Champaign"
+
+Ramshaw,"Prestwick Point Apartments, Champaign"
+
+Ramshaw,"Single Family Homes, Champaign"
+
+Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign"
+
+Ramshaw,"Southwest Place – 2403 Leeper, Champaign"
+
+Ramshaw,"Southwest Place – 2404 Leeper, Champaign"
+
+Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign"
+
+Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign"
+
+Ramshaw,"Southwest Place – 2504 Leeper, Champaign"
+
+Ramshaw,"Southwest Place – 2504 Myers, Champaign"
+
+Ramshaw,"Southwest Place – 2508 Myers, Champaign"
+
+Ramshaw,"Southwest Place – 2509 Leeper, Champaign"
+
+Ramshaw,"Southwest Place – 2510 Myers, Champaign"
+
+Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign"
+
+Ramshaw,"Southwest Place- 1907 Nancy, Champaign"
+
+Ramshaw,"Stratford Residences, Urbana"
+
+Ramshaw,"Tuscany Ridge, Champaign"
+`;
+var apartmentsCompleteList = [];
 var currentFilteredApartments;
 var currentStartIndex = 0;
 var dummyArrayForTesting = [
@@ -13,7 +267,37 @@ var dummyArrayForTesting = [
 	{Name: "tiger", Address: "jungle UChampaign", Rent: 0, Bedrooms: 2, Bathrooms: 5, Type: "Apartment"}, 
 
 ];
-apartmentsCompleteList = dummyArrayForTesting;
+function getBankierApartments() {
+	//read csv 
+	var reader = new FileReader();
+}
+function getJSMApartments() {
+	//read csv 
+	var delimiter = ",";
+	var str = jsmData;
+	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+	 const arr = rows.map(function (row) {
+    const values = row.split(delimiter);
+    const el = headers.reduce(function (object, header, index) {
+      object[header] = values[index];
+      return object;
+    }, {});
+    return el;
+  });
+  console.log(arr);
+  for (var i = 0; i < arr.length; i++) {
+	  apartmentsCompleteList.push(arr[i]);
+  }
+}
+function getRamshawApartments() {
+	//read csv
+}
+function getSmileApartments() {
+	//readcsv
+}
+//apartmentsCompleteList = dummyArrayForTesting;
 //note to self: add flexbox div for sort functionality and implement fxns for it 
 
 document.getElementById("advSearc").addEventListener("click",openAdvSearch);
@@ -189,10 +473,10 @@ function sortFilteredApartments(apartments) {
 function displayApartment(apartment, lineNumber) {
 	var tableRow = document.getElementById((lineNumber + 1).toString());
 	var dataCells = tableRow.getElementsByTagName("td");
-	dataCells[0].innerHTML = apartment.Name;
+	dataCells[0].innerHTML = apartment.Company;
 	dataCells[1].innerHTML = apartment.Address;
 	dataCells[2].innerHTML = apartment.Rent;
-	dataCells[3].innerHTML = apartment.Type;
+	dataCells[3].innerHTML = "Apartment";
 	dataCells[4].innerHTML = apartment.Bedrooms;
 	dataCells[5].innerHTML = apartment.Bathrooms;
 }
@@ -223,6 +507,10 @@ function getAllApartments() {
 		//will put the info into apartmentsCompleteList
 	//probably an array of dictionaries so that we can access the different properties\
 	
+	getBankierApartments();
+	getJSMApartments();
+	getRamshawApartments();
+	getSmileApartments();
 	sortFilteredApartments(apartmentsCompleteList);
 	displayApartments(apartmentsCompleteList, 0);
 }
@@ -262,6 +550,8 @@ function displayApartments(filteredApartments, startIndex) {
 	if (filteredApartments == null) return;
 	for (var lineNum = 0; lineNum < filteredApartments.length - currentStartIndex; lineNum++) {
 		if (lineNum < 6) {
+			console.log(lineNum);
+			console.log(currentStartIndex);
 			displayApartment(filteredApartments[startIndex + lineNum], lineNum);
 		}
 	} 
