@@ -182,8 +182,10 @@ function getBankierApartments() {
 
 	 const arr = rows.map(function (row) {
     const values = row.split(delimiter);
+	const address = values[2] + "," + values[3];
     const el = headers.reduce(function (object, header, index) {
       object[header] = values[index];
+	  object["Address"] = address;
       return object;
     }, {});
     return el;
@@ -221,8 +223,10 @@ function getRamshawApartments() {
 
 	 const arr = rows.map(function (row) {
     const values = row.split(delimiter);
+	const address = values[1] + "," + values[2];
     const el = headers.reduce(function (object, header, index) {
       object[header] = values[index];
+	  object["Address"] = address;
       return object;
     }, {});
     return el;
