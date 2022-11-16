@@ -323,7 +323,7 @@ function filterByNumBedrooms(apartments) {
 			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
-			} else if (apartments[index]["Bedrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+			} else if ((str.includes("5") || str.includes("6") || str.includes("7")) && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
 				break;
 			}
@@ -348,7 +348,7 @@ function filterByNumBathrooms(apartments) {
 			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
-			} else if (apartments[index]["Bathrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+			} else if ((str.includes("5") || str.includes("6") || str.includes("7")) && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
 				break;
 			}
