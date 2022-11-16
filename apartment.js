@@ -62,194 +62,100 @@ JSM,1103 S. Euclid,"$1935 ",3 Beds,1 Bath
 JSM,1103 S. Euclid,"$3185 ",5 Beds,2 Bath
 JSM,102 E. Gregory,"$1065 ",1 Beds,1 Bath
 JSM,102 E. Gregory,$1380-1530,2 Beds,1 Bath`;
-var bankierData = `
-Company,Title,Address
-
+var bankierData = `Company,Title,Address
 Bankier,1107 S 2nd St.,"1107 S 2nd St, Champaign, IL"
-
 Bankier,112 E Green,"112 E Green St, Champaign, IL"
-
 Bankier,Skyline Tower,"519 E Green St, Champaign, IL"
-
 Bankier,Skyline West,"509 E Green St, Champaign, IL"
-
 Bankier,509 1/2 E. Green St.,"509 E Green St, Champaign, IL"
-
 Bankier,Skylight Court,"410 E Green St, Champaign, IL"
-
 Bankier,408 E. Green St.,"408 E Green St, Champaign, IL"
-
-Bankier,Park Place Tower,"202 E Green St, Champaign, IL"
-
+Bankier,Park Place Tower,"202 E Green St, Champaign, IL
 Bankier,406 E. Green St.,"406 E Green St, Champaign, IL"
-
 Bankier,624 S. 5th St.,"624 S 5th St, Champaign, IL"
-
 Bankier,403 E. Green St.,"403 E Green St, Champaign, IL"
-
 Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"
 `;
-var ramshawData = `
-Company,Address
-
+var ramshawData = `Company,Address
 Ramshaw,"1002 S. Second St., Champaign"
-
 Ramshaw,"1010 S. First St., Champaign"
-
 Ramshaw,"1012 S. First St., Champaign"
-
 Ramshaw,"102 N. Gregory St, Urbana"
-
 Ramshaw,"107 E. Daniel, Champaign"
-
 Ramshaw,"107 S. Wright St, Champaign"
-
 Ramshaw,"109 W. Church, Savoy"
-
 Ramshaw,"110 & 112 Tomaras Ave, Savoy"
-
 Ramshaw,"1105 W. Main St, Urbana"
-
 Ramshaw,"1105 W. Oregon St., Urbana"
-
 Ramshaw,"1107 W. Oregon St., Urbana"
-
 Ramshaw,"1108 W. Nevada St., Urbana"
-
 Ramshaw,"1110 W. Stoughton St, Urbana"
-
 Ramshaw,"1604B Lyndhurst, Savoy"
-
 Ramshaw,"1606 W. Healey St, Champaign"
-
 Ramshaw,"201 S. Elm St, Champaign"
-
 Ramshaw,"202 Munroe St., Bondville"
-
 Ramshaw,"202 W. Columbia Ave., Champaign"
-
 Ramshaw,"208 W. Washington St., Champaign"
-
 Ramshaw,"209 N. Coler, Urbana"
-
 Ramshaw,"210 W. Washington St., Champaign"
-
 Ramshaw,"212 W. Washington St., Champaign"
-
 Ramshaw,"2407 Carrelton, Champaign"
-
 Ramshaw,"2407 John, Champaign"
-
 Ramshaw,"3 Angela Court, Savoy"
-
 Ramshaw,"302 S. Cedar St., Urbana"
-
 Ramshaw,"303 & 305 E Clark, Champaign"
-
 Ramshaw,"305 E John St., Champaign"
-
 Ramshaw,"308 E. Clark St, Champaign"
-
 Ramshaw,308 W Green St Urbana
-
 Ramshaw,"310 E. Chalmers St., Champaign"
-
 Ramshaw,"310 W. Green St., Urbana"
-
 Ramshaw,"311 Columbia, Champaign"
-
 Ramshaw,"312 Columbia, Champaign"
-
 Ramshaw,"312 W. Springfield Ave., Urbana"
-
 Ramshaw,"312 W. Springfield, Champaign"
-
 Ramshaw,"402 S. Race St., Urbana"
-
 Ramshaw,"404 S. Busey, Urbana"
-
 Ramshaw,"412 Church, Champaign"
-
 Ramshaw,"508 W Columbia, Champaign"
-
 Ramshaw,"509 N Willis Ave, Champaign"
-
 Ramshaw,"509 W. Main St, Urbana"
-
 Ramshaw,"510 S. Mattis Ave, Champaign"
-
 Ramshaw,"59 E. John St., Champaign"
-
 Ramshaw,"605 W. Green St., Urbana"
-
 Ramshaw,"606 W. Healey St, Champaign"
-
 Ramshaw,"616 W. Healey, Champaign"
-
 Ramshaw,"702 W. Western Ave, Urbana"
-
 Ramshaw,"703 W. Park Ave., Champaign"
-
 Ramshaw,"704 Stoughton St., Urbana"
-
 Ramshaw,"705 W. Main St., Urbana"
-
 Ramshaw,"706 S. Locust, Champaign"
-
 Ramshaw,"802 W. Iowa St., Urbana IL"
-
 Ramshaw,"804 W. Church St, Champaign"
-
 Ramshaw,"905 S. Second St., Champaign"
-
 Ramshaw,Busey Lincoln Apartments
-
 Ramshaw,"Capstone Quarters, Champaign"
-
 Ramshaw,"Cobblefield Condos, Champaign"
-
 Ramshaw,"Crescent Drive, Champaign"
-
 Ramshaw,"Kobuck Apartments, Savoy"
-
 Ramshaw,"Park Place – Plymouth, Champaign"
-
 Ramshaw,"Parkland Cove, Champaign"
-
 Ramshaw,"Parkview Apartments – 111 Park, Urbana"
-
 Ramshaw,"Pomona Drive Condos, Champaign"
-
 Ramshaw,"Prestwick Point Apartments, Champaign"
-
 Ramshaw,"Single Family Homes, Champaign"
-
 Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign"
-
 Ramshaw,"Southwest Place – 2403 Leeper, Champaign"
-
 Ramshaw,"Southwest Place – 2404 Leeper, Champaign"
-
 Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign"
-
 Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign"
-
 Ramshaw,"Southwest Place – 2504 Leeper, Champaign"
-
 Ramshaw,"Southwest Place – 2504 Myers, Champaign"
-
 Ramshaw,"Southwest Place – 2508 Myers, Champaign"
-
 Ramshaw,"Southwest Place – 2509 Leeper, Champaign"
-
 Ramshaw,"Southwest Place – 2510 Myers, Champaign"
-
 Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign"
-
 Ramshaw,"Southwest Place- 1907 Nancy, Champaign"
-
 Ramshaw,"Stratford Residences, Urbana"
-
 Ramshaw,"Tuscany Ridge, Champaign"
 `;
 var apartmentsCompleteList = [];
@@ -269,7 +175,25 @@ var dummyArrayForTesting = [
 ];
 function getBankierApartments() {
 	//read csv 
-	var reader = new FileReader();
+	var delimiter = ",";
+	var str = bankierData;
+	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+	 const arr = rows.map(function (row) {
+    const values = row.split(delimiter);
+	const address = values[2] + "," + values[3];
+    const el = headers.reduce(function (object, header, index) {
+      object[header] = values[index];
+	  object["Address"] = address;
+      return object;
+    }, {});
+    return el;
+  });
+  console.log(arr);
+  for (var i = 0; i < arr.length; i++) {
+	  apartmentsCompleteList.push(arr[i]);
+  }
 }
 function getJSMApartments() {
 	//read csv 
@@ -292,7 +216,25 @@ function getJSMApartments() {
   }
 }
 function getRamshawApartments() {
-	//read csv
+	var delimiter = ",";
+	var str = ramshawData;
+	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+	 const arr = rows.map(function (row) {
+    const values = row.split(delimiter);
+	const address = values[1] + "," + values[2];
+    const el = headers.reduce(function (object, header, index) {
+      object[header] = values[index];
+	  object["Address"] = address;
+      return object;
+    }, {});
+    return el;
+  });
+  console.log(arr);
+  for (var i = 0; i < arr.length; i++) {
+	  apartmentsCompleteList.push(arr[i]);
+  }
 }
 function getSmileApartments() {
 	//readcsv
@@ -345,7 +287,7 @@ function filterByCompanyName(apartments) {
 	var filtered = [];
 	var name = document.getElementById("company").value;
 	for (var index = 0; index < apartments.length; ++index) {
-		if (apartments[index].Name == name) {
+		if (apartments[index].Company == name) {
 			//console.log(apartments[index]);
 			filtered.push(apartments[index]);
 		}
@@ -376,10 +318,12 @@ function filterByNumBedrooms(apartments) {
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
-			if (apartments[index]["Bedrooms"] == parseFloat(possibilities[number])) {
+			var str = apartments[index]["Bedrooms"];
+			if (str == undefined) str = "";
+			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
-			} else if (apartments[index]["Bedrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+			} else if ((str.includes("5") || str.includes("6") || str.includes("7")) && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
 				break;
 			}
@@ -399,10 +343,12 @@ function filterByNumBathrooms(apartments) {
 	var filtered = [];
 	for (var index = 0; index < apartments.length; ++index) {
 		for (var number = 0; number < possibilities.length; ++number) {
-			if (apartments[index]["Bathrooms"] == parseFloat(possibilities[number])) {
+			var str = apartments[index]["Bathrooms"];
+			if (str == undefined) str = "";
+			if (str.includes(possibilities[number])) {
 				filtered.push(apartments[index]);
 				break;
-			} else if (apartments[index]["Bathrooms"] > 5 && parseFloat(possibilities[number]) == 5) {
+			} else if ((str.includes("5") || str.includes("6") || str.includes("7")) && parseFloat(possibilities[number]) == 5) {
 				filtered.push(apartments[index]);
 				break;
 			}
@@ -522,7 +468,7 @@ function search() {
 	var filtered = [];
 	var name = document.getElementById("mainSearch").value;
 	for (var index = 0; index < apartmentsCompleteList.length; ++index) {
-		if (apartmentsCompleteList[index].Name == name) {
+		if (apartmentsCompleteList[index].Company == name) {
 			filtered.push(apartmentsCompleteList[index]);
 		}
 	}
