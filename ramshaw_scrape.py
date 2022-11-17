@@ -29,6 +29,7 @@ with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
     addresses = []
 
     project_href = [i['title'] for i in soup.find_all('a', title =True)]
+    links = [i['href'] for i in soup.find_all('a', title = True)]
 
     # print(project_href)
 
@@ -46,10 +47,21 @@ with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
     project_href.pop(0)
     project_href.pop(0)
 
-    project_href = project_href[::2]
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
+    links.pop(0)
 
-    for i in project_href:
-        csv_writer.writerow(["Ramshaw", i])
+    project_href = project_href[::2]
+    links = links[::2]
+
+    for i in range(80):
+        link = links[i]
+        csv_writer.writerow(["Ramshaw", project_href[i]])
 
 
 # for i in project_href:
