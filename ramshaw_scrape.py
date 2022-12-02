@@ -24,7 +24,7 @@ AVAIL_UNITS = 0
 
 with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(['Company', 'Address'])
+    csv_writer.writerow(['Company', 'Address', 'Rent'])
 
     addresses = []
 
@@ -58,10 +58,16 @@ with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
 
     project_href = project_href[::2]
     links = links[::2]
+    links.pop(65)
 
-    for i in range(80):
+    for i in range(79):
         link = links[i]
-        csv_writer.writerow(["Ramshaw", project_href[i]])
+
+        new_source = requests.get(link, timeout=10).text
+        soupy = BeautifulSoup(new_source, 'lxml')
+        rent = soupy.find('span', class_ = 'fl-heading-text').text
+
+        csv_writer.writerow(["Ramshaw", project_href[i], rent])
 
 
 # for i in project_href:
