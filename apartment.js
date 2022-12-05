@@ -75,87 +75,88 @@ Bankier,406 E. Green St.,"406 E Green St, Champaign, IL"
 Bankier,624 S. 5th St.,"624 S 5th St, Champaign, IL"
 Bankier,403 E. Green St.,"403 E Green St, Champaign, IL"
 Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"`;
-var ramshawData = `Company,Address
-Ramshaw,"1002 S. Second St., Champaign"
-Ramshaw,"1010 S. First St., Champaign"
-Ramshaw,"1012 S. First St., Champaign"
-Ramshaw,"102 N. Gregory St, Urbana"
-Ramshaw,"107 E. Daniel, Champaign"
-Ramshaw,"107 S. Wright St, Champaign"
-Ramshaw,"109 W. Church, Savoy"
-Ramshaw,"110 & 112 Tomaras Ave, Savoy"
-Ramshaw,"1105 W. Main St, Urbana"
-Ramshaw,"1105 W. Oregon St., Urbana"
-Ramshaw,"1107 W. Oregon St., Urbana"
-Ramshaw,"1108 W. Nevada St., Urbana"
-Ramshaw,"1110 W. Stoughton St, Urbana"
-Ramshaw,"1604B Lyndhurst, Savoy"
-Ramshaw,"1606 W. Healey St, Champaign"
-Ramshaw,"201 S. Elm St, Champaign"
-Ramshaw,"202 Munroe St., Bondville"
-Ramshaw,"202 W. Columbia Ave., Champaign"
-Ramshaw,"208 W. Washington St., Champaign"
-Ramshaw,"209 N. Coler, Urbana"
-Ramshaw,"210 W. Washington St., Champaign"
-Ramshaw,"212 W. Washington St., Champaign"
-Ramshaw,"2407 Carrelton, Champaign"
-Ramshaw,"2407 John, Champaign"
-Ramshaw,"3 Angela Court, Savoy"
-Ramshaw,"302 S. Cedar St., Urbana"
-Ramshaw,"303 & 305 E Clark, Champaign"
-Ramshaw,"305 E John St., Champaign"
-Ramshaw,"308 E. Clark St, Champaign"
-Ramshaw,308 W Green St Urbana
-Ramshaw,"310 E. Chalmers St., Champaign"
-Ramshaw,"310 W. Green St., Urbana"
-Ramshaw,"311 Columbia, Champaign"
-Ramshaw,"312 Columbia, Champaign"
-Ramshaw,"312 W. Springfield Ave., Urbana"
-Ramshaw,"312 W. Springfield, Champaign"
-Ramshaw,"402 S. Race St., Urbana"
-Ramshaw,"404 S. Busey, Urbana"
-Ramshaw,"412 Church, Champaign"
-Ramshaw,"508 W Columbia, Champaign"
-Ramshaw,"509 N Willis Ave, Champaign"
-Ramshaw,"509 W. Main St, Urbana"
-Ramshaw,"510 S. Mattis Ave, Champaign"
-Ramshaw,"59 E. John St., Champaign"
-Ramshaw,"605 W. Green St., Urbana"
-Ramshaw,"606 W. Healey St, Champaign"
-Ramshaw,"616 W. Healey, Champaign"
-Ramshaw,"702 W. Western Ave, Urbana"
-Ramshaw,"703 W. Park Ave., Champaign"
-Ramshaw,"704 Stoughton St., Urbana"
-Ramshaw,"705 W. Main St., Urbana"
-Ramshaw,"706 S. Locust, Champaign"
-Ramshaw,"802 W. Iowa St., Urbana IL"
-Ramshaw,"804 W. Church St, Champaign"
-Ramshaw,"905 S. Second St., Champaign"
-Ramshaw,Busey Lincoln Apartments
-Ramshaw,"Capstone Quarters, Champaign"
-Ramshaw,"Cobblefield Condos, Champaign"
-Ramshaw,"Crescent Drive, Champaign"
-Ramshaw,"Kobuck Apartments, Savoy"
-Ramshaw,"Park Place – Plymouth, Champaign"
-Ramshaw,"Parkland Cove, Champaign"
-Ramshaw,"Parkview Apartments – 111 Park, Urbana"
-Ramshaw,"Pomona Drive Condos, Champaign"
-Ramshaw,"Prestwick Point Apartments, Champaign"
-Ramshaw,"Single Family Homes, Champaign"
-Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign"
-Ramshaw,"Southwest Place – 2403 Leeper, Champaign"
-Ramshaw,"Southwest Place – 2404 Leeper, Champaign"
-Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign"
-Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign"
-Ramshaw,"Southwest Place – 2504 Leeper, Champaign"
-Ramshaw,"Southwest Place – 2504 Myers, Champaign"
-Ramshaw,"Southwest Place – 2508 Myers, Champaign"
-Ramshaw,"Southwest Place – 2509 Leeper, Champaign"
-Ramshaw,"Southwest Place – 2510 Myers, Champaign"
-Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign"
-Ramshaw,"Southwest Place- 1907 Nancy, Champaign"
-Ramshaw,"Stratford Residences, Urbana"
-Ramshaw,"Tuscany Ridge, Champaign"`;
+
+var ramshawData = `Company,Address,Rent
+Ramshaw,"1002 S. Second St., Champaign",$560 Per Bedroom
+Ramshaw,"1010 S. First St., Champaign",$490-$640 Per Month
+Ramshaw,"1012 S. First St., Champaign",$490 Per Bedroom
+Ramshaw,"102 N. Gregory St, Urbana",$720 Per Month
+Ramshaw,"107 E. Daniel, Champaign","$320 Per Bedroom/$1280 Per Month"
+Ramshaw,"107 S. Wright St, Champaign","$665-$1920 per month"
+Ramshaw,"109 W. Church, Savoy",$545 - $930  per month
+Ramshaw,"110 & 112 Tomaras Ave, Savoy","$1150 per month"
+Ramshaw,"1105 W. Main St, Urbana",Fully Leased
+Ramshaw,"1105 W. Oregon St., Urbana",$750 - $850 Per Month
+Ramshaw,"1107 W. Oregon St., Urbana",$750 - 850 per month
+Ramshaw,"1108 W. Nevada St., Urbana","$775 - 1140 per month"
+Ramshaw,"1110 W. Stoughton St, Urbana",$805 - $885  per month
+Ramshaw,"1604B Lyndhurst, Savoy","$1500 per month"
+Ramshaw,"1606 W. Healey St, Champaign","$815- $1300 per month"
+Ramshaw,"201 S. Elm St, Champaign",$800 - $850 per month
+Ramshaw,"202 Munroe St., Bondville",$615 - $645 per month
+Ramshaw,"202 W. Columbia Ave., Champaign",Fully Leased
+Ramshaw,"208 W. Washington St., Champaign",Fully Leased
+Ramshaw,"209 N. Coler, Urbana",$640-$910 per month
+Ramshaw,"210 W. Washington St., Champaign","$1060 per month"
+Ramshaw,"212 W. Washington St., Champaign",$999 per month
+Ramshaw,"2407 Carrelton, Champaign",$1400 per month
+Ramshaw,"2407 John, Champaign",$850 per month
+Ramshaw,"3 Angela Court, Savoy",$1850 per month
+Ramshaw,"302 S. Cedar St., Urbana",$399-$950 Per Month
+Ramshaw,"303 & 305 E Clark, Champaign",$520 - $550 per month
+Ramshaw,"305 E John St., Champaign","$900 - 1700 per month"
+Ramshaw,"308 E. Clark St, Champaign","$1380 per month"
+Ramshaw,308 W Green St Urbana,$685 - 850 per month
+Ramshaw,"310 E. Chalmers St., Champaign",$575-$860 Per Month
+Ramshaw,"310 W. Green St., Urbana","$1650 per month"
+Ramshaw,"311 Columbia, Champaign","$815 - $1300 per month"
+Ramshaw,"312 Columbia, Champaign",Fully Leased
+Ramshaw,"312 W. Springfield Ave., Urbana",$850 Per Month
+Ramshaw,"312 W. Springfield, Champaign",$800-850 per month
+Ramshaw,"402 S. Race St., Urbana",Fully Leased
+Ramshaw,"404 S. Busey, Urbana","1650 per month"
+Ramshaw,"412 Church, Champaign",$400 - $600 per month
+Ramshaw,"508 W Columbia, Champaign",$995 per month
+Ramshaw,"509 N Willis Ave, Champaign","$625 - $1400  per month"
+Ramshaw,"509 W. Main St, Urbana",$650 Per Month
+Ramshaw,"510 S. Mattis Ave, Champaign","$1025 - $1150 per month"
+Ramshaw,"59 E. John St., Champaign",$325 Per Bedroom/Per Month
+Ramshaw,"605 W. Green St., Urbana","$2340 - 2540 per month"
+Ramshaw,"606 W. Healey St, Champaign",Leased
+Ramshaw,"616 W. Healey, Champaign",$599 per month
+Ramshaw,"702 W. Western Ave, Urbana",$725 - 745 per month
+Ramshaw,"703 W. Park Ave., Champaign",$670 - 795 per month
+Ramshaw,"704 Stoughton St., Urbana",$585 - $750 per month
+Ramshaw,"705 W. Main St., Urbana","$585 - 1400 per month"
+Ramshaw,"706 S. Locust, Champaign",$445-$825 Per Month
+Ramshaw,"802 W. Iowa St., Urbana IL","$1545 per month"
+Ramshaw,"804 W. Church St, Champaign",$550-750 per month
+Ramshaw,"905 S. Second St., Champaign",$445 Per Bedroom
+Ramshaw,Busey Lincoln Apartments,$740 per month
+Ramshaw,"Capstone Quarters, Champaign",Per Bedroom $425 - $625 
+Ramshaw,"Cobblefield Condos, Champaign","$1200 per month"
+Ramshaw,"Crescent Drive, Champaign",$900 - $995 per month
+Ramshaw,"Kobuck Apartments, Savoy",$650 - $950 per month
+Ramshaw,"Park Place – Plymouth, Champaign",Fully Leased
+Ramshaw,"Parkland Cove, Champaign",Fully Leased
+Ramshaw,"Parkview Apartments – 111 Park, Urbana",$565 - $745 per month
+Ramshaw,"Pomona Drive Condos, Champaign",Fully Leased
+Ramshaw,"Prestwick Point Apartments, Champaign",Fully Leased
+Ramshaw,"Single Family Homes, Champaign",$740 - $850 per month
+Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign",Fully Leased
+Ramshaw,"Southwest Place – 2403 Leeper, Champaign",Fully Leased
+Ramshaw,"Southwest Place – 2404 Leeper, Champaign",Fully Leased
+Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign",$990 per month
+Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign","$995 - 1095 per month"
+Ramshaw,"Southwest Place – 2504 Leeper, Champaign",Fully Lease
+Ramshaw,"Southwest Place – 2504 Myers, Champaign",$995 Per Month
+Ramshaw,"Southwest Place – 2508 Myers, Champaign",$995 per month
+Ramshaw,"Southwest Place – 2509 Leeper, Champaign","$1090 per month
+Ramshaw,"Southwest Place – 2510 Myers, Champaign",Fully Leased
+Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign",$890 per month
+Ramshaw,"Southwest Place- 1907 Nancy, Champaign","$1045 per month"
+Ramshaw,"Stratford Residences, Urbana","$825 - $1100 per month"
+`;
 var apartmentsCompleteList = [];
 var currentFilteredApartments;
 var currentStartIndex = 0;
@@ -247,6 +248,9 @@ function getRamshawApartments() {
 	  if (strs.substring(0,1) == "\"") strs = strs.substring(1);
 	  if (strs.substring(strs.length - 1) == "\"") strs = strs.substring(0, strs.length - 1);
       object[header] = strs;
+	  var rent = values[3];
+	  if (rent != undefined && rent.substring(0,1) == "\"") rent = rent.substring(1, rent.length-1);
+	  object["Rent"] = rent;
 	  object["Address"] = address;
       return object;
     }, {});
@@ -270,7 +274,7 @@ document.getElementById("closeAdv").addEventListener("click", closeAdvSearch);
 function openAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "visible";
 	document.getElementById("advancedSearchFilters").style.width = "400px";
-	document.getElementById("advancedSearchFilters").style.height	= "330px";
+	document.getElementById("advancedSearchFilters").style.height	= "310px";
 	document.getElementById("searchBar").style.visibility = "hidden";
 	document.getElementById("searchBar").style.width = "0px";
 	document.getElementById("searchBar").style.height = "0px";
@@ -320,11 +324,24 @@ function filterByMaxRent(apartments) {
 	console.log(apartments.length);
 	var filtered = [];
 	var maxRent = parseFloat(document.getElementById("rent").value);
-	for (var index = 0; index < apartments.length; ++index) {
-		if (parseFloat(apartments[index]["Rent"]) <= maxRent) {
-			filtered.push(apartments[index]);
+	
+		for (var index = 0; index < apartments.length; ++index) {
+			var rentString = apartments[index]["Rent"];
+			if (rentString == undefined) continue;
+			if (rentString.includes("-")) {
+				var rent1 = parseFloat(rentString.substring(1,rentString.indexOf("-")));
+				var rent2 = rentString.substring(rentString.indexOf("-"));
+				if (rent1 <= maxRent) {
+					filtered.push(apartments[index]);
+				}
+			} else {
+				rentString = parseFloat(rentString.substring(1));
+				if (rentString <= maxRent) {
+					filtered.push(apartments[index]);
+				}
+			}
 		}
-	}
+		
 	return filtered;
 }
 function filterByNumBedrooms(apartments) {
@@ -446,6 +463,11 @@ function displayApartment(apartment, lineNumber) {
 	dataCells[3].innerHTML = "Apartment";
 	dataCells[4].innerHTML = apartment.Bedrooms;
 	dataCells[5].innerHTML = apartment.Bathrooms;
+	for (var i = 0; i < 6; ++i) {
+		if (dataCells[i].innerHTML == "undefined") {
+			dataCells[i].innerHTML = "";
+		}
+	}
 }
 document.getElementById("previousSet").addEventListener("click", displayPreviousSet);
 function displayPreviousSet() {
@@ -497,6 +519,7 @@ function search() {
 }
 function advancedSearch() {
 	var filtered = applyFilters(apartmentsCompleteList);
+	currentStartIndex = 0;
 	displayApartments(filtered, 0);
 }
 function clearCells() {
