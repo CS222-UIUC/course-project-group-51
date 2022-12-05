@@ -24,7 +24,7 @@ AVAIL_UNITS = 0
 
 with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(['Company', 'Address', 'Rent'])
+    csv_writer.writerow(['Company', 'Address', 'Rent', 'Bedrooms', 'Bathrooms'])
 
     addresses = []
 
@@ -60,14 +60,36 @@ with open('ramshaw_scrape.csv', 'w', encoding='utf8') as csv_file:
     links = links[::2]
     links.pop(65)
 
+    # new_source = requests.get(links[1], timeout=10).text
+    # soupy = BeautifulSoup(new_source, 'lxml')
+    # for info in soupy.find_all('div', class_ = 'fl-icon-text fl-icon-text-wrap'):
+    #     print(info.text)
+
     for i in range(79):
         link = links[i]
 
         new_source = requests.get(link, timeout=10).text
         soupy = BeautifulSoup(new_source, 'lxml')
-        rent = soupy.find('span', class_ = 'fl-heading-text').text
+        rent = ' ' + soupy.find('span', class_ = 'fl-heading-text').text
+        beds = rent
+        baths = rent
 
-        csv_writer.writerow(["Ramshaw", project_href[i], rent])
+        for info in soupy.find_all('div', class_ = 'fl-icon-text fl-icon-text-wrap'):
+            st = info.text
+            if st[1].isdigit():
+                if beds == rent:
+                    beds = info.text
+                    beds = beds[1:]
+                    beds = beds[:-1]
+                    # beds = ' ' + beds
+                elif baths == rent:
+                    baths = info.text
+                    baths = baths[1:]
+                    # baths = ' ' + baths
+                else:
+                    break
+
+        csv_writer.writerow(["Ramshaw", project_href[i], rent, beds, baths])
 
 
 # for i in project_href:
