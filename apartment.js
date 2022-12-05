@@ -320,11 +320,24 @@ function filterByMaxRent(apartments) {
 	console.log(apartments.length);
 	var filtered = [];
 	var maxRent = parseFloat(document.getElementById("rent").value);
-	for (var index = 0; index < apartments.length; ++index) {
-		if (parseFloat(apartments[index]["Rent"]) <= maxRent) {
-			filtered.push(apartments[index]);
+	
+		for (var index = 0; index < apartments.length; ++index) {
+			var rentString = apartments[index]["Rent"];
+			if (rentString == undefined) continue;
+			if (rentString.includes("-")) {
+				var rent1 = parseFloat(rentString.substring(1,rentString.indexOf("-")));
+				var rent2 = rentString.substring(rentString.indexOf("-"));
+				if (rent1 <= maxRent) {
+					filtered.push(apartments[index]);
+				}
+			} else {
+				rentString = parseFloat(rentString.substring(1));
+				if (rentString <= maxRent) {
+					filtered.push(apartments[index]);
+				}
+			}
 		}
-	}
+		
 	return filtered;
 }
 function filterByNumBedrooms(apartments) {
