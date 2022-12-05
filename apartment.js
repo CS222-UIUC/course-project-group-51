@@ -76,87 +76,86 @@ Bankier,624 S. 5th St.,"624 S 5th St, Champaign, IL"
 Bankier,403 E. Green St.,"403 E Green St, Champaign, IL"
 Bankier,621 E. Green St.,"621 E Green St, Champaign, IL"`;
 
-var ramshawData = `Company,Address,Rent
-Ramshaw,"1002 S. Second St., Champaign",$560 Per Bedroom
-Ramshaw,"1010 S. First St., Champaign",$490-$640 Per Month
-Ramshaw,"1012 S. First St., Champaign",$490 Per Bedroom
-Ramshaw,"102 N. Gregory St, Urbana",$720 Per Month
-Ramshaw,"107 E. Daniel, Champaign","$320 Per Bedroom/$1280 Per Month"
-Ramshaw,"107 S. Wright St, Champaign","$665-$1920 per month"
-Ramshaw,"109 W. Church, Savoy",$545 - $930  per month
-Ramshaw,"110 & 112 Tomaras Ave, Savoy","$1150 per month"
-Ramshaw,"1105 W. Main St, Urbana",Fully Leased
-Ramshaw,"1105 W. Oregon St., Urbana",$750 - $850 Per Month
-Ramshaw,"1107 W. Oregon St., Urbana",$750 - 850 per month
-Ramshaw,"1108 W. Nevada St., Urbana","$775 - 1140 per month"
-Ramshaw,"1110 W. Stoughton St, Urbana",$805 - $885  per month
-Ramshaw,"1604B Lyndhurst, Savoy","$1500 per month"
-Ramshaw,"1606 W. Healey St, Champaign","$815- $1300 per month"
-Ramshaw,"201 S. Elm St, Champaign",$800 - $850 per month
-Ramshaw,"202 Munroe St., Bondville",$615 - $645 per month
-Ramshaw,"202 W. Columbia Ave., Champaign",Fully Leased
-Ramshaw,"208 W. Washington St., Champaign",Fully Leased
-Ramshaw,"209 N. Coler, Urbana",$640-$910 per month
-Ramshaw,"210 W. Washington St., Champaign","$1060 per month"
-Ramshaw,"212 W. Washington St., Champaign",$999 per month
-Ramshaw,"2407 Carrelton, Champaign",$1400 per month
-Ramshaw,"2407 John, Champaign",$850 per month
-Ramshaw,"3 Angela Court, Savoy",$1850 per month
-Ramshaw,"302 S. Cedar St., Urbana",$399-$950 Per Month
-Ramshaw,"303 & 305 E Clark, Champaign",$520 - $550 per month
-Ramshaw,"305 E John St., Champaign","$900 - 1700 per month"
-Ramshaw,"308 E. Clark St, Champaign","$1380 per month"
-Ramshaw,308 W Green St Urbana,$685 - 850 per month
-Ramshaw,"310 E. Chalmers St., Champaign",$575-$860 Per Month
-Ramshaw,"310 W. Green St., Urbana","$1650 per month"
-Ramshaw,"311 Columbia, Champaign","$815 - $1300 per month"
-Ramshaw,"312 Columbia, Champaign",Fully Leased
-Ramshaw,"312 W. Springfield Ave., Urbana",$850 Per Month
-Ramshaw,"312 W. Springfield, Champaign",$800-850 per month
-Ramshaw,"402 S. Race St., Urbana",Fully Leased
-Ramshaw,"404 S. Busey, Urbana","1650 per month"
-Ramshaw,"412 Church, Champaign",$400 - $600 per month
-Ramshaw,"508 W Columbia, Champaign",$995 per month
-Ramshaw,"509 N Willis Ave, Champaign","$625 - $1400  per month"
-Ramshaw,"509 W. Main St, Urbana",$650 Per Month
-Ramshaw,"510 S. Mattis Ave, Champaign","$1025 - $1150 per month"
-Ramshaw,"59 E. John St., Champaign",$325 Per Bedroom/Per Month
-Ramshaw,"605 W. Green St., Urbana","$2340 - 2540 per month"
-Ramshaw,"606 W. Healey St, Champaign",Leased
-Ramshaw,"616 W. Healey, Champaign",$599 per month
-Ramshaw,"702 W. Western Ave, Urbana",$725 - 745 per month
-Ramshaw,"703 W. Park Ave., Champaign",$670 - 795 per month
-Ramshaw,"704 Stoughton St., Urbana",$585 - $750 per month
-Ramshaw,"705 W. Main St., Urbana","$585 - 1400 per month"
-Ramshaw,"706 S. Locust, Champaign",$445-$825 Per Month
-Ramshaw,"802 W. Iowa St., Urbana IL","$1545 per month"
-Ramshaw,"804 W. Church St, Champaign",$550-750 per month
-Ramshaw,"905 S. Second St., Champaign",$445 Per Bedroom
-Ramshaw,Busey Lincoln Apartments,$740 per month
-Ramshaw,"Capstone Quarters, Champaign",Per Bedroom $425 - $625 
-Ramshaw,"Cobblefield Condos, Champaign","$1200 per month"
-Ramshaw,"Crescent Drive, Champaign",$900 - $995 per month
-Ramshaw,"Kobuck Apartments, Savoy",$650 - $950 per month
-Ramshaw,"Park Place – Plymouth, Champaign",Fully Leased
-Ramshaw,"Parkland Cove, Champaign",Fully Leased
-Ramshaw,"Parkview Apartments – 111 Park, Urbana",$565 - $745 per month
-Ramshaw,"Pomona Drive Condos, Champaign",Fully Leased
-Ramshaw,"Prestwick Point Apartments, Champaign",Fully Leased
-Ramshaw,"Single Family Homes, Champaign",$740 - $850 per month
-Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign",Fully Leased
-Ramshaw,"Southwest Place – 2403 Leeper, Champaign",Fully Leased
-Ramshaw,"Southwest Place – 2404 Leeper, Champaign",Fully Leased
-Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign",$990 per month
-Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign","$995 - 1095 per month"
-Ramshaw,"Southwest Place – 2504 Leeper, Champaign",Fully Lease
-Ramshaw,"Southwest Place – 2504 Myers, Champaign",$995 Per Month
-Ramshaw,"Southwest Place – 2508 Myers, Champaign",$995 per month
-Ramshaw,"Southwest Place – 2509 Leeper, Champaign","$1090 per month
-Ramshaw,"Southwest Place – 2510 Myers, Champaign",Fully Leased
-Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign",$890 per month
-Ramshaw,"Southwest Place- 1907 Nancy, Champaign","$1045 per month"
-Ramshaw,"Stratford Residences, Urbana","$825 - $1100 per month"
-`;
+var ramshawData = `Company,Address,Rent,Bedrooms,Bathrooms
+Ramshaw,"1002 S. Second St., Champaign", $560 Per Bedroom,4 Bed,2 Bath 
+Ramshaw,"1010 S. First St., Champaign", $490-$640 Per Month,2 Bed,1 Bath 
+Ramshaw,"1012 S. First St., Champaign", $490 Per Bedroom,2 Bed,1 Bath 
+Ramshaw,"102 N. Gregory St, Urbana", $720 Per Month,2 Bed,1 Bath 
+Ramshaw,"107 E. Daniel, Champaign"," $320 Per Bedroom/$1280 Per Month",4 Bed,2 Bath 
+Ramshaw,"107 S. Wright St, Champaign"," $665-$1920 per month",5 Bed,1.5 Bath 
+Ramshaw,"109 W. Church, Savoy", $545 - $930  per month,1 Bed,1 Bath 
+Ramshaw,"110 & 112 Tomaras Ave, Savoy"," $1150 per month",3 Bed,1.5 Bath 
+Ramshaw,"1105 W. Main St, Urbana", Fully Leased,2 or 3 Bed,1 Bath 
+Ramshaw,"1105 W. Oregon St., Urbana", $750 - $850 Per Month,2 Bed,1 Bath 
+Ramshaw,"1107 W. Oregon St., Urbana", $750 - 850 per month,2 Bed,1 Bath 
+Ramshaw,"1108 W. Nevada St., Urbana"," $775 - 1140 per month",3 Bed,1 Bath 
+Ramshaw,"1110 W. Stoughton St, Urbana", $805 - $885  per month,2 Bed,1 Bath 
+Ramshaw,"1604B Lyndhurst, Savoy"," $1500 per month",2 Bed,1.5 Bath 
+Ramshaw,"1606 W. Healey St, Champaign"," $815- $1300 per month",3 Bed,1 Bath 
+Ramshaw,"201 S. Elm St, Champaign", $800 - $850 per month,1 Bed,1 Bath 
+Ramshaw,"202 Munroe St., Bondville", $615 - $645 per month,1 Bed,1 Bath 
+Ramshaw,"202 W. Columbia Ave., Champaign", Fully Leased,1 Bed,1 Bath 
+Ramshaw,"208 W. Washington St., Champaign", Fully Leased,4 Bed,2 Bath 
+Ramshaw,"209 N. Coler, Urbana", $640-$910 per month,2 Bed,1 Bath 
+Ramshaw,"210 W. Washington St., Champaign"," $1060 per month",4 Bed,2 Bath 
+Ramshaw,"212 W. Washington St., Champaign", $999 per month,3 Bed,2 Bath 
+Ramshaw,"2407 Carrelton, Champaign", $1400 per month,4 Bed,2 Bath 
+Ramshaw,"2407 John, Champaign", $850 per month,2 Bed,1.5 Bath 
+Ramshaw,"3 Angela Court, Savoy", $1850 per month,3 Bed,2 Bath 
+Ramshaw,"302 S. Cedar St., Urbana", $399-$950 Per Month,2 Bed,1 Bath 
+Ramshaw,"303 & 305 E Clark, Champaign", $520 - $550 per month,1 Bed 
+Ramshaw,"305 E John St., Champaign"," $900 - 1700 per month",4 Bed,3 Bath 
+Ramshaw,"308 E. Clark St, Champaign"," $1380 per month",4 Bed,3 Bath 
+Ramshaw,308 W Green St Urbana,, $685 - 850 per month,1 Bed,1 Bath 
+Ramshaw,"310 E. Chalmers St., Champaign", $575-$860 Per Month,1 Bed,1 Bath 
+Ramshaw,"310 W. Green St., Urbana"," $1650 per month",3 Bed,2 Bath 
+Ramshaw,"311 Columbia, Champaign"," $815 - $1300 per month",2 Bed,1 Bath 
+Ramshaw,"312 Columbia, Champaign", Fully Leased,2 Bed,1 Bath 
+Ramshaw,"312 W. Springfield Ave., Urbana", $850 Per Month,2 Bed,1 Bath 
+Ramshaw,"312 W. Springfield, Champaign", $800-850 per month,1 Bed,1 Bath 
+Ramshaw,"402 S. Race St., Urbana", Fully Leased,1 Bath,1 Bed 
+Ramshaw,"404 S. Busey, Urbana"," 1650 per month",4 Bed,2 Bath 
+Ramshaw,"412 Church, Champaign", $400 - $600 per month,1 Bed,1 Bath 
+Ramshaw,"508 W Columbia, Champaign", $995 per month,3 Bed,1 Bath 
+Ramshaw,"509 N Willis Ave, Champaign"," $625 - $1400  per month",2 Bed,1 Bath 
+Ramshaw,"509 W. Main St, Urbana", $650 Per Month,1 Bed,1 Bath 
+Ramshaw,"510 S. Mattis Ave, Champaign"," $1025 - $1150 per month",2 Bed,2.5 Bath 
+Ramshaw,"59 E. John St., Champaign", $325 Per Bedroom/Per Month,3 Bed,2 Bath 
+Ramshaw,"605 W. Green St., Urbana"," $2340 - 2540 per month",4 Bed,4 Bath 
+Ramshaw,"606 W. Healey St, Champaign", Leased,1 Bed,1 Bath 
+Ramshaw,"616 W. Healey, Champaign", $599 per month,,1 Bath
+Ramshaw,"702 W. Western Ave, Urbana", $725-745 per month,1 Bed,1 Bath 
+Ramshaw,"703 W. Park Ave., Champaign", $670-795 per month,1 Bath,1 Bed 
+Ramshaw,"704 Stoughton St., Urbana", $585-$750 per month,,1 Bath
+Ramshaw,"705 W. Main St., Urbana"," $585-1400 per month",,1 Bath
+Ramshaw,"706 S. Locust, Champaign", $445-$825 Per Month,,1 Bath
+Ramshaw,"802 W. Iowa St., Urbana IL"," $1545 per month",5 Bed,2 Bath 
+Ramshaw,"804 W. Church St, Champaign", $550-750 per month,1 Bath,1 Bed 
+Ramshaw,"905 S. Second St., Champaign", $445 Per Bedroom,2 Bed,1 Bath 
+Ramshaw,Busey Lincoln Apartments,, $740 per month,2 Bed 
+Ramshaw,"Capstone Quarters, Champaign", Per Bedroom $425 - $625 ,2 Bed,2 Bath 
+Ramshaw,"Cobblefield Condos, Champaign"," $1200 per month",2 Bed 
+Ramshaw,"Crescent Drive, Champaign", $900 - $995 per month,3 Bed,1.5 Bath 
+Ramshaw,"Kobuck Apartments, Savoy", $650 - $950 per month,2 Bed 
+Ramshaw,"Park Place – Plymouth, Champaign", Fully Leased,1 Bed,1 Bath 
+Ramshaw,"Parkland Cove, Champaign", Fully Leased,2 Bed,2 Bath 
+Ramshaw,"Parkview Apartments – 111 Park, Urbana", $565 - $745 per month,,1 Bath
+Ramshaw,"Pomona Drive Condos, Champaign", Fully Leased,3 Bed,2 Bath 
+Ramshaw,"Prestwick Point Apartments, Champaign", Fully Leased,2 Bed,2 Bath 
+Ramshaw,"Single Family Homes, Champaign", $740 - $850 per month,2 Bed 
+Ramshaw,"Southwest Place – 1901-1902 Karen Ct, Champaign", Fully Leased,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2403 Leeper, Champaign", Fully Leased,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2404 Leeper, Champaign", Fully Leased,1 Bed,1 Bath 
+Ramshaw,"Southwest Place – 2502 Myers Ct, Champaign", $990 per month,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2503 Leeper Dr, Champaign","$995 - 1095 per month",2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2504 Leeper, Champaign", Fully Leased,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2504 Myers, Champaign", $995 Per Month,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place – 2508 Myers, Champaign", $995 per month,2 Bed,1 Bath 
+Ramshaw,"Southwest Place – 2509 Leeper, Champaign","$1090 per month",2 Bed,2 Bath 
+Ramshaw,"Southwest Place – 2510 Myers, Champaign", Fully Leased,2 Bed 
+Ramshaw,"Southwest Place – 2517-2525 Leeper Dr, Champaign", $890 per month,2 Bed,1.5 Bath 
+Ramshaw,"Southwest Place- 1907 Nancy, Champaign","$1045 per month",1 Bath,1 Bed 
+Ramshaw,"Stratford Residences, Urbana","$825 - $1100 per month",2 Bed,2.5 Bath`;
 var apartmentsCompleteList = [];
 var currentFilteredApartments;
 var currentStartIndex = 0;
@@ -250,6 +249,12 @@ function getRamshawApartments() {
       object[header] = strs;
 	  var rent = values[3];
 	  if (rent != undefined && rent.substring(0,1) == "\"") rent = rent.substring(1, rent.length-1);
+	  var beds = values[4];
+	  if (beds != undefined && beds.substring(0,1) == "\"") beds = beds.substring(1, beds.length-1);
+	  var baths = values[5];
+	  if (baths != undefined && baths.substring(0,1) == "\"") baths = baths.substring(1, baths.length-1);
+	  object["Bedrooms"] = beds;
+	  object["Bathrooms"] = baths;
 	  object["Rent"] = rent;
 	  object["Address"] = address;
       return object;
@@ -496,9 +501,10 @@ function getAllApartments() {
 		//will put the info into apartmentsCompleteList
 	//probably an array of dictionaries so that we can access the different properties\
 	
-	getBankierApartments();
+	
 	getJSMApartments();
 	getRamshawApartments();
+	getBankierApartments();
 	getSmileApartments();
 	sortFilteredApartments(apartmentsCompleteList);
 	displayApartments(apartmentsCompleteList, 0);
