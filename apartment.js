@@ -270,7 +270,7 @@ document.getElementById("closeAdv").addEventListener("click", closeAdvSearch);
 function openAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "visible";
 	document.getElementById("advancedSearchFilters").style.width = "400px";
-	document.getElementById("advancedSearchFilters").style.height	= "330px";
+	document.getElementById("advancedSearchFilters").style.height	= "310px";
 	document.getElementById("searchBar").style.visibility = "hidden";
 	document.getElementById("searchBar").style.width = "0px";
 	document.getElementById("searchBar").style.height = "0px";
@@ -459,6 +459,11 @@ function displayApartment(apartment, lineNumber) {
 	dataCells[3].innerHTML = "Apartment";
 	dataCells[4].innerHTML = apartment.Bedrooms;
 	dataCells[5].innerHTML = apartment.Bathrooms;
+	for (var i = 0; i < 6; ++i) {
+		if (dataCells[i].innerHTML == "undefined") {
+			dataCells[i].innerHTML = "";
+		}
+	}
 }
 document.getElementById("previousSet").addEventListener("click", displayPreviousSet);
 function displayPreviousSet() {
