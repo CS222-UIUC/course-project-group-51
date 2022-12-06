@@ -279,7 +279,7 @@ document.getElementById("closeAdv").addEventListener("click", closeAdvSearch);
 function openAdvSearch() {
 	document.getElementById("advancedSearchFilters").style.visibility	= "visible";
 	document.getElementById("advancedSearchFilters").style.width = "400px";
-	document.getElementById("advancedSearchFilters").style.height	= "310px";
+	document.getElementById("advancedSearchFilters").style.height	= "290px";
 	document.getElementById("searchBar").style.visibility = "hidden";
 	document.getElementById("searchBar").style.width = "0px";
 	document.getElementById("searchBar").style.height = "0px";
@@ -303,7 +303,7 @@ function applyFilters(apartments) {
 	filtered = filterByMaxRent(filtered);
 	filtered = filterByNumBedrooms(filtered);
 	filtered = filterByNumBathrooms(filtered);
-	filtered = filterByType(filtered);
+	//filtered = filterByType(filtered);
 	/*
 	filtered = filterByGreen(filtered);
 	*/
@@ -465,10 +465,10 @@ function displayApartment(apartment, lineNumber) {
 	dataCells[0].innerHTML = apartment.Company;
 	dataCells[1].innerHTML = apartment.Address;
 	dataCells[2].innerHTML = apartment.Rent;
-	dataCells[3].innerHTML = "Apartment";
-	dataCells[4].innerHTML = apartment.Bedrooms;
-	dataCells[5].innerHTML = apartment.Bathrooms;
-	for (var i = 0; i < 6; ++i) {
+	//dataCells[3].innerHTML = "Apartment";
+	dataCells[3].innerHTML = apartment.Bedrooms;
+	dataCells[4].innerHTML = apartment.Bathrooms;
+	for (var i = 0; i < 5; ++i) {
 		if (dataCells[i].innerHTML == "undefined") {
 			dataCells[i].innerHTML = "";
 		}
@@ -537,8 +537,7 @@ function clearCells() {
 		dataCells[2].innerHTML = "";
 		dataCells[3].innerHTML = "";
 		dataCells[4].innerHTML = "";
-		dataCells[5].innerHTML = "";
-	}
+		}
 }
 function displayApartments(filteredApartments, startIndex) {
 	currentFilteredApartments = filteredApartments;
